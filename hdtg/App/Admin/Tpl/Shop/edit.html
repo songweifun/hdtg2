@@ -1,0 +1,66 @@
+<load file="./hdtg/App/Admin/Tpl/Common/header.html" />
+<hdui/>
+<script type="text/javascript" src="__PUBLIC__/js/shop.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FZyqcF0ijadlVPQriZhTYGti"></script>
+<div id="map">
+	<span class='title'>添加商铺</span>
+</div>
+<div id="content">
+	<form id="ShopForm" action="{|U('Admin/Shop/edit')}/shopid/{$data.shopid}" method="post">
+	<table class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th width="20%">名称</th>
+				<th>值</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<tr>
+				<td>商铺名称</td>
+				<td>
+					<input type="text" name="shopname" value="{$data.shopname}" />
+				</td>
+			</tr>
+
+			<tr>
+				<td>商铺地址</td>
+				<td>
+					<input name="shopaddress" type="text" id="shopaddress" value="{$data.shopaddress}" />
+				</td>
+			</tr>
+			<tr>
+				<td>地铁地址</td>
+				<td>
+					<input name="metroaddress" type="text"  value="{$data.metroaddress}" />
+				</td>
+			</tr>
+
+			<tr>
+				<td>商铺电话</td>
+				<td>
+					<input name="shoptel" type="text"  value="{$data.shoptel}" />
+				</td>
+			</tr>
+
+			<tr>
+				<td>商铺坐标</td>
+				<td>
+					<input name="shopcoord" type="text" id="shopcoord" />
+					<input type="button" class='btn' value="点击获得坐标" id="shopcoordbtn" />
+				</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" class='btn' /></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+	
+	
+	
+</div>
+</body>
+</html>
