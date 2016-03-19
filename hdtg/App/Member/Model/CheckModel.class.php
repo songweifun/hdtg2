@@ -17,6 +17,15 @@ public function addUser($data)
 	return $this->add($data);
 ;}
 
+
+/**
+ * 验证登陆的方法
+ */
+public function checkLogin($where){
+
+	return $this->where($where)->find();
+}
+
 }
 
 

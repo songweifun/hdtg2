@@ -68,7 +68,7 @@
 						<a class='title' href="<?php echo U('Member/Reg/index');?>">注册</a>
 					</div>
 					<div class='user-nav login-reg'>	
-						<a class='title' href="">登录</a>
+						<a class='title' href="<?php echo U('Member/Login/index');?>">登录</a>
 					</div>
 				<!--我的团购 -->	
 					<div class='user-nav my-hdtg '>
