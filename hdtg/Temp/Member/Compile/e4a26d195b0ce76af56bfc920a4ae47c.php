@@ -174,16 +174,17 @@
 		<h3>会员登录</h3>
 		<div class='left'>
 			<div class='form'>
+			<form action="<?php echo U('Member/Login/login');?>" method="post">
 				<dl>
 					<dt>账号:</dt>
 					<dd class='text'>
-						<input  type="text"/>
+						<input  name="username" type="text"/>
 					</dd>
 				</dl>
 				<dl>
 					<dt>密码:</dt>
 					<dd class='text'>
-						<input type="password"/>
+						<input name="password" type="password"/>
 					</dd>
 					<dd><a style="color:#11bbbb;" href="">忘记密码</a></dd>
 				</dl>
@@ -205,6 +206,7 @@
 						<input type="submit" value="登录">
 					</dd>
 				</dl>
+				</form>
 			</div>
 		</div>
 		<div class='right'>
