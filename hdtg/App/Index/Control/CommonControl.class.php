@@ -12,9 +12,13 @@ class CommonControl extends Control{
 		}
 
 		  $this->setDav();
+		  //分配是否登陆变量
+		  $this->assign("userLogin",isset($_SESSION[C('RBAC_AUTH_KEY')]));
 			
 	}
-
+/**
+ * 获得等级栏目
+ */
 	private function setDav(){
 		$db=K('Category');
 		$dav=$db->getTopCategory(0);

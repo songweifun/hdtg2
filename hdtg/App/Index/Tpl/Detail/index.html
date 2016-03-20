@@ -25,7 +25,7 @@
 						</div>
 						<div class='deal-buy-cart'>
 							<a href="" class='buy'></a>
-							<a href="" class='cart'></a>
+							<a href="javascript:void(0)" url="{|U('Member/Cart/add')}/gid/{$data.gid}" id="cartId" class='cart'></a>
 						</div>
 						<div class='purchased'>
 							<p class='people'>
@@ -148,7 +148,7 @@
 	</div>		
 
 
-
+<!-- 百度地图 -->
 
 		<script type="text/javascript">
 						var point={$data.shopcoord};
@@ -188,7 +188,44 @@
 			</script>
 
 
+<!-- 购物车模板 -->
+</div>
+	<div class="c"></div>
+	<div id="cover"></div>
+	<div id="infoWindow">
+		
+	</div>
 
+<script src="__PUBLIC__/js/detail.js"></script>
+	<script>
+		var cartSucc = "<div class='colse'><a href='javascript:hideInfoWindow();'></a></div>\
+			<ul class='status'>\
+			<li class='ico'></li>\
+			<li class='msg'>\
+				<h3>添加成功!</h3>\
+				<p>购物车内共有<span id='total'></span>种商品</p>\
+			</li>\
+		</ul>\
+		<div class='goBtn'>\
+			<a href='javascript:hideInfoWindow();'>继续浏览</a>\
+			<a href='{|U('Member/Cart/index')}'>查看购物车</a>\
+		</div>";
+		var collectSucc = "<div class='colse'><a href='javascript:hideInfoWindow();'></a></div>\
+			<ul class='status'>\
+			<li class='ico'></li>\
+			<li class='msg'>\
+				<h3>收藏成功!</h3>\
+			</li>\
+		</ul>\
+		<div class='goBtn'>\
+			<a href='javascript:hideInfoWindow();'>继续浏览</a>\
+			<a href='{|U('Member/Index/collect')}'>查看我的收藏</a>\
+		</div>";
+		var userIsLogin = false;
+		<if value="$userIsLogin">
+			userIsLogin = true;
+		</if>
+	</script>
 
 
 
