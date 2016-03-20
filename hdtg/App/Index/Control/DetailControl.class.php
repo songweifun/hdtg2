@@ -12,6 +12,7 @@
    			}
 
         public function index(){
+          p($_SESSION);
         	$data=$this->db->getGoodsDetail($this->gid);
 
           $data=$this->setDetailData($data);

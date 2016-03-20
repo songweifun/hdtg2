@@ -81,5 +81,8 @@ return array(
 
 
 			),
+		/********************************cookie**********************/
+		"RBAC_AUTH_KEY"                 => "uid",      //用户SESSION名
+		"COOKIE_LIFT_TIME" => 864000
 );
 ?>

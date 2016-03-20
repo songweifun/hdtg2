@@ -62,15 +62,16 @@
 			</div>
 			<!-- 用户相关 -->
 			<div id="user-relevance" class='user-relevance'>
-				
-				<!--登录注册-->
+                            
+<?php if($userLogin){?>
+  <!--登录注册-->
 					<div class='user-nav login-reg'>
 						<a class='title' href="<?php echo U('Member/Reg/index');?>">注册</a>
 					</div>
 					<div class='user-nav login-reg'>	
-						<a class='title' href="<?php echo U('Member/Login/index');?>">登录</a>
+						<a class='title' href="<?php echo U('Member/Login/quit');?>">退出</a>
 					</div>
-				<!--我的团购 -->	
+					<!--我的团购 -->	
 					<div class='user-nav my-hdtg '>
 						<a class='title' href="">我的团购</a>
 						<ul class="menu">
@@ -83,6 +84,19 @@
 							<li><a href="">账户设置</a></li>
 						</ul>
 					</div>
+
+ <?php  }else{ ?>
+   <!--登录注册-->
+					<div class='user-nav login-reg'>
+						<a class='title' href="<?php echo U('Member/Reg/index');?>">注册</a>
+					</div>
+					<div class='user-nav login-reg'>	
+						<a class='title' href="<?php echo U('Member/Login/index');?>">登录</a>
+					</div>
+<?php }?> 
+				
+				
+				
 				<!-- 最近浏览 -->	
 					<div  class='user-nav recent-view '>
 						<a class='title' href="">最近浏览</a>
@@ -193,7 +207,7 @@
 						</div>
 						<div class='deal-buy-cart'>
 							<a href="" class='buy'></a>
-							<a href="" class='cart'></a>
+							<a href="javascript:void(0)" url="<?php echo U('Member/Cart/add');?>/gid/<?php echo $data['gid'];?>" id="cartId" class='cart'></a>
 						</div>
 						<div class='purchased'>
 							<p class='people'>
@@ -316,7 +330,7 @@
 	</div>		
 
 
-
+<!-- 百度地图 -->
 
 		<script type="text/javascript">
 						var point=<?php echo $data['shopcoord'];?>;
@@ -356,7 +370,44 @@
 			</script>
 
 
+<!-- 购物车模板 -->
+</div>
+	<div class="c"></div>
+	<div id="cover"></div>
+	<div id="infoWindow">
+		
+	</div>
 
+<script src="http://localhost/hdtg2/hdtg/App/Index/Tpl/Public/js/detail.js"></script>
+	<script>
+		var cartSucc = "<div class='colse'><a href='javascript:hideInfoWindow();'></a></div>\
+			<ul class='status'>\
+			<li class='ico'></li>\
+			<li class='msg'>\
+				<h3>添加成功!</h3>\
+				<p>购物车内共有<span id='total'></span>种商品</p>\
+			</li>\
+		</ul>\
+		<div class='goBtn'>\
+			<a href='javascript:hideInfoWindow();'>继续浏览</a>\
+			<a href='<?php echo U('Member/Cart/index');?>'>查看购物车</a>\
+		</div>";
+		var collectSucc = "<div class='colse'><a href='javascript:hideInfoWindow();'></a></div>\
+			<ul class='status'>\
+			<li class='ico'></li>\
+			<li class='msg'>\
+				<h3>收藏成功!</h3>\
+			</li>\
+		</ul>\
+		<div class='goBtn'>\
+			<a href='javascript:hideInfoWindow();'>继续浏览</a>\
+			<a href='<?php echo U('Member/Index/collect');?>'>查看我的收藏</a>\
+		</div>";
+		var userIsLogin = false;
+		<?php if($userIsLogin){?>
+			userIsLogin = true;
+		<?php }?>
+	</script>
 
 
 

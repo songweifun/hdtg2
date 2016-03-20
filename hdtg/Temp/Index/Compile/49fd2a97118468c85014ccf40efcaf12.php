@@ -62,15 +62,16 @@
 			</div>
 			<!-- 用户相关 -->
 			<div id="user-relevance" class='user-relevance'>
-				
-				<!--登录注册-->
+                            
+<?php if($userLogin){?>
+  <!--登录注册-->
 					<div class='user-nav login-reg'>
 						<a class='title' href="<?php echo U('Member/Reg/index');?>">注册</a>
 					</div>
 					<div class='user-nav login-reg'>	
-						<a class='title' href="<?php echo U('Member/Login/index');?>">登录</a>
+						<a class='title' href="<?php echo U('Member/Login/quit');?>">退出</a>
 					</div>
-				<!--我的团购 -->	
+					<!--我的团购 -->	
 					<div class='user-nav my-hdtg '>
 						<a class='title' href="">我的团购</a>
 						<ul class="menu">
@@ -83,6 +84,19 @@
 							<li><a href="">账户设置</a></li>
 						</ul>
 					</div>
+
+ <?php  }else{ ?>
+   <!--登录注册-->
+					<div class='user-nav login-reg'>
+						<a class='title' href="<?php echo U('Member/Reg/index');?>">注册</a>
+					</div>
+					<div class='user-nav login-reg'>	
+						<a class='title' href="<?php echo U('Member/Login/index');?>">登录</a>
+					</div>
+<?php }?> 
+				
+				
+				
 				<!-- 最近浏览 -->	
 					<div  class='user-nav recent-view '>
 						<a class='title' href="">最近浏览</a>
