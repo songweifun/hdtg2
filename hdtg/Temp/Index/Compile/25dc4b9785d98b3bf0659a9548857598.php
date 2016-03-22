@@ -159,8 +159,9 @@
 							<p class='clear'><a href="">清空最近浏览记录</a></p>
 						</ul>
 					</div>
-					<div  class='user-nav my-cart '>
-						<a class='title' href=""><i>&nbsp;</i>购物车</a>
+
+					<div  class='user-nav my-cart ' url="<?php echo U('Member/Cart/getHoverAjaxData');?>">
+						<a class='title' href="<?php echo U('Member/Cart/index');?>"><i>&nbsp;</i>购物车</a>
 						<ul class="menu">
 							<li>
 								<a class='image' href="">
@@ -176,6 +177,7 @@
 							<p class='clear'><a href="">查看我的购物车</a></p>
 						</ul>
 					</div>
+
 			</div>
 		</div>
 	</div> 

@@ -1,4 +1,4 @@
-<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>	<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -159,8 +159,7 @@
 							<p class='clear'><a href="">清空最近浏览记录</a></p>
 						</ul>
 					</div>
-
-					<div  class='user-nav my-cart ' url="<?php echo U('Member/Cart/getHoverAjaxData');?>" cartUrl="<?php echo U('Member/Cart/index');?>">
+					<div  class='user-nav my-cart '>
 						<a class='title' href="<?php echo U('Member/Cart/index');?>"><i>&nbsp;</i>购物车</a>
 						<ul class="menu">
 							<li>
@@ -174,12 +173,60 @@
 									<span><strong>¥25</strong><a href="">删除</a></span>
 								</div>					
 							</li>
-							
+							<p class='clear'><a href="">查看我的购物车</a></p>
 						</ul>
 					</div>
-
 			</div>
 		</div>
 	</div> 
 	<!-- 导航结束 -->
 	
+	<!-- 载入公共头部文件-->
+	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/login.css" type="text/css" rel="stylesheet" >
+	<!-- 页面主体开始 -->
+	<div id="login-box">
+		<h3>会员登录</h3>
+		<div class='left'>
+			<form action="<?php echo U('Member/Login/login');?>" method="post" >
+			<div class='form'>
+				<dl>
+					<dt>账号:</dt>
+					<dd class='text'>
+						<input name="username"  type="text"/>
+					</dd>
+				</dl>
+				<dl>
+					<dt>密码:</dt>
+					<dd class='text'>
+						<input name="password" type="password"/>
+					</dd>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd>			
+						<label>
+							<input name="auto_login" type="checkbox"/> 下次自动登录
+						</label>
+					</dd>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd class='submit'>
+						<input type="submit" value="登录">
+					</dd>
+				</dl>
+			</div>
+			</form>
+		</div>
+		<div class='right'>
+			<p class='right-title'>尚未注册？</p>
+			<a class='reg-link' href="">免费注册</a>
+			<p class='open-title'>用合作网站账号登录</p>
+			<div class='open'>
+				<a class='open-login-link sina' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/weibo_login.png"></a>
+				<a class='open-login-link qq' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/qq_login.png"></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
