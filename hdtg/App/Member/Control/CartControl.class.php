@@ -1,11 +1,11 @@
 <?php
-class CartControl extends Control{
+class CartControl extends CommonControl{
 	/**
 	 * 显示购物车页
 	 */	
 	private $uid=null;
 	//p判断用户是否登陆了
-	public function __init(){
+	public function __auto(){
 		if(isset($_SESSION[C('RBAC_AUTH_KEY')])){
 			$this->uid=$_SESSION[C('RBAC_AUTH_KEY')];
 			$data=array();
@@ -30,10 +30,23 @@ class CartControl extends Control{
 		}
 	}
 
+
+
 	public function index(){
+		$result=$this->getCartData();
+		$this->assign("carts",$result[0]);
+		$this->assign("total",$result[1]);
 		$this->display();
 	}
 
+
+
+
+/**
+ * 添加购物车
+ * @Author   FSW
+ * @DateTime 2016-03-22T12:16:52+0800
+ */
 	public function add()
 	{
 		if(IS_AJAX===false) {throw new Exception("错误的访问");}
@@ -71,5 +84,148 @@ class CartControl extends Control{
 		exit(json_encode($result));
 		
 	}
+/**
+ * 获得用于分配给前台的购物车数据
+ * @Author   FSW<keepfun.com>
+ * @DateTime 2016-03-22T14:08:11+0800
+ * @return   [type]                   [description]
+ */
+	public function getCartData(){
+		if(is_null($this->uid)){//未登录的状态
+			if(isset($_SESSION['cart']['goods'])===false) return;
+			$data=$_SESSION['cart']['goods'];
+			$result=array();
+			$total=0;
+			//$total=0;
+			$db=K('Cart');
+			foreach ($data as $key => $value) {
+				# code...
+				$result[$key]=$db->getGoodsData($data[$key]['id']);
+				$result[$key]['num']=$data[$key]['num'];
+				//$arr=$result[];
+				$result[$key]=$this->disGoodsData($result[$key]);
+				$total+=$result[$key]['xiaoji'];
+	
+			}
+			return array($result,$total);
+
+		}else{//登陆的状态
+			$db=K('Cart');
+			$result=array();
+			$total=0;
+			$data=$db->getGids($this->uid);
+			foreach ($data as $key => $value) {
+				# code...
+				$result[$key]=$db->getGoodsData($data[$key]['goods_id']);
+				$result[$key]['num']=$data[$key]['goods_num'];
+				//$arr=$result[];
+				$result[$key]=$this->disGoodsData($result[$key]);
+				$total+=$result[$key]['xiaoji'];
+				
+			}
+			return array($result,$total);
+		}
+	}
+
+/**
+ * 对从数据所查数据进行处理
+ * @Author   FSW<keepfun.com>
+ * @DateTime 2016-03-22T13:57:25+0800
+ * @param    [type]                   $data [description]
+ * @return   [type]                         [description]
+ */
+	public function disGoodsData($data){
+		$data['xiaoji']=$data['price']*$data['num'];
+		$pathInfo=pathinfo($data['goods_img']);
+        $data['goods_img']=__ROOT__.'/'. $pathInfo['dirname'].'/'.$pathInfo['filename']."_92x54.".$pathInfo['extension'];
+        $data['status']=$data['end_time']<time()?"已下架":"可以购买";
+        return $data;
+
+	}
+
+
+/**
+ * 异步获得获得购物车内商品数量数据
+ * @Author   FSW<keepfun@163.com>
+ * @DateTime 2016-03-22T22:27:15+0800
+ * @return   [type]                   [description]
+ */
+	public function getAjaxData()
+	{
+		# code...
+		if(IS_AJAX===false) {throw new Exception("错误的访问");}
+
+		$result=array();
+		$num=$this->_post('num','intval');
+		$gid=$this->_post('gid','intval');
+
+		if(is_null($this->uid)){//用户没有登陆
+			foreach ($_SESSION['cart']['goods'] as $key => $value) {
+				# code...
+				if($value['id']==$gid){
+					$_SESSION['cart']['goods'][$key]['num']=$num;
+				}
+			}
+
+			$result=array('status'=>true,"num"=>$num);
+		}else{//用户登陆
+			$db=K('cart');
+			$where=array("user_id"=>$this->uid,"goods_id"=>$gid);
+			if($db->updateGoodsNum($where,$num)){
+				$result=array('status'=>true,"num"=>$num);
+			}
+			
+
+		}
+		exit(json_encode($result));
+		//p($_POST);
+		
+	}
+
+
+	public function getHoverAjaxData()
+	{
+		# code...
+		if(IS_AJAX===false) {throw new Exception("错误的访问");}
+
+		if(is_null($this->uid)){//未登录的状态
+			if(isset($_SESSION['cart']['goods'])===false) return;
+			$data=$_SESSION['cart']['goods'];
+			$result=array();
+			$total=0;
+			//$total=0;
+			$db=K('Cart');
+			foreach ($data as $key => $value) {
+				# code...
+				$result[$key]=$db->getGoodsData($data[$key]['id']);
+				$result[$key]['num']=$data[$key]['num'];
+				//$arr=$result[];
+				$result[$key]=$this->disGoodsData($result[$key]);
+				$total+=$result[$key]['xiaoji'];
+	
+			}
+			  exit(json_encode(array($result,$total)));
+
+		}else{//登陆的状态
+			$db=K('Cart');
+			$result=array();
+			$total=0;
+			$data=$db->getGids($this->uid);
+			foreach ($data as $key => $value) {
+				# code...
+				$result[$key]=$db->getGoodsData($data[$key]['goods_id']);
+				$result[$key]['num']=$data[$key]['goods_num'];
+				//$arr=$result[];
+				$result[$key]=$this->disGoodsData($result[$key]);
+				$total+=$result[$key]['xiaoji'];
+				
+			}
+				p($result);
+			 exit(json_encode(array($result,$total)));
+		}
+
+	}
+
+
 }
 ?>

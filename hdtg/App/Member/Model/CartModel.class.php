@@ -28,7 +28,13 @@ class CartModel extends Model{
  }
 
 
-
+/**
+ * 追加数量
+ * @Author   FSW<keepfun.com>
+ * @DateTime 2016-03-22T12:34:32+0800
+ * @param    [type]                   $data [description]
+ * @return   [type]                         [description]
+ */
 public function incCart($data){
 
 	$this->inc("goods_num","goods_id=".$data['goods_id'],1);
@@ -37,10 +43,53 @@ public function incCart($data){
 	}
 
 
+/**
+ * 查询商品信息
+ * @Author   FSW<keepfun.com>
+ * @DateTime 2016-03-22T12:39:54+0800
+ * @param    [int]                   $gid [商品gid]
+ * @return   [array]                        [单个商品信息]
+ */
+public function getGoodsData($gid){
+	$field=array(
+			"gid",
+			"price",
+			"goods_img",
+			"end_time",
+			"main_title"
+		);
+	return $this->table('goods')->field($field)->where(array('gid'=>$gid))->find();
+
+}
 
 
+/**
+ * 根据uid获得商品的gid数组
+ * @Author   FSW<keepfun.com>
+ * @DateTime 2016-03-22T15:45:29+0800
+ * @param    [type]                   $uid [description]
+ * @return   [type]                        [description]
+ */
+public function getGids($uid)
+{
+	# code...
+	return $this->where(array('user_id'=>$uid))->select();
+}
 
-
+/**
+ * 更新购物车的数量
+ * @Author   FSW<keepfun.com>
+ * @DateTime 2016-03-22T15:48:57+0800
+ * @param    [type]                   $where [description]
+ * @param    [type]                   $num   [description]
+ * @return   [type]                          [description]
+ */
+public function updateGoodsNum($where,$num)
+{
+	# code...
+	$this->where($where)->save(array("goods_num"=>$num));
+	return $this->getAffectedRows();
+}
 }
 
 

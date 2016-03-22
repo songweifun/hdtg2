@@ -51,6 +51,36 @@ $(function(){
 	//购物车菜单切换
 	$('#nav .my-cart').hover(function(){
 		$(this).find('.menu').show();
+		var url=$(this).attr('url');
+		var cartUrl=$(this).attr('cartUrl');
+		var self=this;
+		$.ajax({
+			url: url,
+			dataType: 'json',
+			//data: {param1: 'value1'},
+			success:function(result){
+				var data=result[0];
+				$(self).find('.menu li').remove();
+				for(var i in data){
+					//alert(data[i]['main_title']);
+					var nodeStr = '<li>\
+								<a class="image" href="">\
+								<img src="'+data[i]['goods_img']+'" />\
+								</a>\
+								<div>\
+								<h4>\
+								<a href="">'+data[i]['main_title']+'</a>\
+								</h4>\
+								<span><strong>'+data[i]['price']+'</strong><a href="">删除</a></span>\
+								</div>\
+								</li>';
+						$(self).find('.menu').append(nodeStr);
+				}
+
+				$(self).find('.menu').append('<p class="clear"><a href="'+cartUrl+'">查看我的购物车</a></p>');
+			}
+		});
+		
 	},function(){
 		$(this).find('.menu').hide();
 	})

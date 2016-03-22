@@ -159,8 +159,9 @@
 							<p class='clear'><a href="">清空最近浏览记录</a></p>
 						</ul>
 					</div>
-					<div  class='user-nav my-cart '>
-						<a class='title' href=""><i>&nbsp;</i>购物车</a>
+
+					<div  class='user-nav my-cart ' url="<?php echo U('Member/Cart/getHoverAjaxData');?>" cartUrl="<?php echo U('Member/Cart/index');?>">
+						<a class='title' href="<?php echo U('Member/Cart/index');?>"><i>&nbsp;</i>购物车</a>
 						<ul class="menu">
 							<li>
 								<a class='image' href="">
@@ -173,9 +174,10 @@
 									<span><strong>¥25</strong><a href="">删除</a></span>
 								</div>					
 							</li>
-							<p class='clear'><a href="">查看我的购物车</a></p>
+							
 						</ul>
 					</div>
+
 			</div>
 		</div>
 	</div> 
@@ -183,7 +185,8 @@
 	
 	<!-- 载入公共头部文件-->
 	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/cart.css" type="text/css" rel="stylesheet" >
-	
+	<script src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/cart.js"></script>
+
 	<div id="main">
 		<div class='step'>
 			<div class='cart-title'>
@@ -219,42 +222,29 @@
 				</tr>
 			</thead>
 			<tbody>
+			<?php if(is_array($carts)):?><?php  foreach($carts as $v){ ?>
 				<tr>
 					<td class='goods-show'>
-						<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-						<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+						<img src="<?php echo $v['goods_img'];?>">
+						<a href="<?php echo U('Index/Detail/index');?>/gid/<?php echo $v['gid'];?>"><?php echo $v['main_title'];?></a>
 					</td>
-					<td>已购买</td>
+					<td><?php echo $v['status'];?></td>
 					<td class='goods-num'>
-						<a href="" class='reduce' id="reduce"></a>
-						<input id="num" type="text" value=1> 
-						<a href="" class='add' id="add"></a>
+						<a href="javascript:void(0);" url="<?php echo U('Member/Cart/getAjaxData');?>/gid/<?php echo $v['gid'];?>" gid="<?php echo $v['gid'];?>" class='reduce' id="reduce"></a>
+						<input id="num" type="text" value=<?php echo $v['num'];?> class="num"> 
+						<a href="javascript:void(0);" url="<?php echo U('Member/Cart/getAjaxData');?>/gid/<?php echo $v['gid'];?>" gid="<?php echo $v['gid'];?>" class='add' id="add"></a>
 					</td>
-					<td>-</td>
-					<td>-</td>
-					<td>删除</td>
+					<td class="price"><?php echo $v['price'];?></td>
+					<td class="xiaoji"><?php echo $v['xiaoji'];?></td>
+					<td><a href="<?php echo U('Member/Cart/delete');?>/gid/<?php echo $v['gid'];?>">删除</a></td>
 				</tr>
-				<tr>
-					<td class='goods-show'>
-						<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-						<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
-					</td>
-					<td>已购买</td>
-					<td class='goods-num'>
-						<a href="" class='reduce' id="reduce"></a>
-						<input id="num" type="text" value=1> 
-						<a href="" class='add' id="add"></a>
-					</td>
-					<td>-</td>
-					<td>-</td>
-					<td>删除</td>
-				</tr>
+				<?php }?><?php endif;?>
 				<tr>
 					<td></td>
 					<td></td>
 					<td></td>
 					<td colspan=3 class='total'>
-						应付总额： <strong>¥<span>117</span></strong> 
+						应付总额： <strong>¥<span><?php echo $total;?></span></strong> 
 					</td>
 				</tr>
 			</tbody>
