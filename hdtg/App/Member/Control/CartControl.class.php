@@ -114,6 +114,7 @@ class CartControl extends CommonControl{
 			$result=array();
 			$total=0;
 			$data=$db->getGids($this->uid);
+			if(isset($data)){
 			foreach ($data as $key => $value) {
 				# code...
 				$result[$key]=$db->getGoodsData($data[$key]['goods_id']);
@@ -123,6 +124,7 @@ class CartControl extends CommonControl{
 				$total+=$result[$key]['xiaoji'];
 				
 			}
+		}
 			return array($result,$total);
 		}
 	}
@@ -182,14 +184,21 @@ class CartControl extends CommonControl{
 		
 	}
 
-
+/**
+ * header购物车移过时获得ajax数据
+ * @Author   FSW<keepfun@163.com>
+ * @DateTime 2016-03-23T11:53:27+0800
+ * @return   [type]                   [description]
+ */
 	public function getHoverAjaxData()
 	{
 		# code...
 		if(IS_AJAX===false) {throw new Exception("错误的访问");}
+		$result=array();
+			$total=0;
 
 		if(is_null($this->uid)){//未登录的状态
-			if(isset($_SESSION['cart']['goods'])===false) return;
+			if(isset($_SESSION['cart']['goods'])===false) exit(json_encode(array("status"=>false)));
 			$data=$_SESSION['cart']['goods'];
 			$result=array();
 			$total=0;
@@ -211,6 +220,7 @@ class CartControl extends CommonControl{
 			$result=array();
 			$total=0;
 			$data=$db->getGids($this->uid);
+			if(isset($data)==false) exit(json_encode(array("status"=>false)));
 			foreach ($data as $key => $value) {
 				# code...
 				$result[$key]=$db->getGoodsData($data[$key]['goods_id']);
@@ -220,11 +230,50 @@ class CartControl extends CommonControl{
 				$total+=$result[$key]['xiaoji'];
 				
 			}
-				p($result);
+				//p($result);
 			 exit(json_encode(array($result,$total)));
 		}
 
 	}
+
+/**
+ * 通过异步删除购物车商品
+ * @Author   FSW<keepfun@163.com>
+ * @DateTime 2016-03-23T13:29:46+0800
+ * @return   [type]                   [description]
+ */
+	public function delete()
+	{
+		# code...
+		if(IS_AJAX===false) return;
+		$gid=$this->_get('gid','intval');
+		//echo $gid;
+		$result=array();
+
+		if(is_null($this->uid)){//未登录的状态
+			$data=$_SESSION['cart']['goods'];
+			foreach ($data as $key => $value) {
+				# code...
+				if($value['id']==$gid)
+					unset($_SESSION['cart']['goods'][$key]);
+					//$_SESSION=array();
+					//session_unset($data[$key]);
+					$result=array("status"=>true);
+
+				//continue;
+			}
+			
+		}else{//登陆的状态
+			$db=K('cart');
+			$where=array("user_id"=>$this->uid,"goods_id"=>$gid);
+			if($db->delCartDate($where)){
+				$result=array("status"=>true);
+			}
+				
+		}
+			exit(json_encode($result));
+		}
+
 
 
 }

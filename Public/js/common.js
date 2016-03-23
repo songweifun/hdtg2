@@ -49,42 +49,107 @@ $(function(){
 		$(this).find('.menu').hide();
 	})
 	//购物车菜单切换
+	var status=0;
 	$('#nav .my-cart').hover(function(){
 		$(this).find('.menu').show();
 		var url=$(this).attr('url');
 		var cartUrl=$(this).attr('cartUrl');
+		var delUrl=$(this).attr('delUrl');
 		var self=this;
+		
+		if(status==1) return;
 		$.ajax({
 			url: url,
 			dataType: 'json',
 			//data: {param1: 'value1'},
 			success:function(result){
+				//alert(result)
+				status=1;
+				
+				if(result.status==false) {
+					$(self).find('.menu p').remove();
+					return $(self).find('.menu').append('<p class="clear">购物车中没有商品</p>');
+				}
 				var data=result[0];
+			//alert(2222)
+				
 				$(self).find('.menu li').remove();
+				$(self).find('.menu p').remove();
+												//<span><strong>'+data[i]['price']+'</strong><a class="del" href="'+delUrl+'/'+data[i]['gid']+'">删除</a></span>\
+
 				for(var i in data){
 					//alert(data[i]['main_title']);
 					var nodeStr = '<li>\
 								<a class="image" href="">\
 								<img src="'+data[i]['goods_img']+'" />\
 								</a>\
-								<div>\
+								<div class="delCartDatas" >\
 								<h4>\
 								<a href="">'+data[i]['main_title']+'</a>\
 								</h4>\
-								<span><strong>'+data[i]['price']+'</strong><a href="">删除</a></span>\
+								<span><strong>'+data[i]['price']+'</strong><a  href="javascript:void(0);" url="'+delUrl+'/gid/'+data[i]['gid']+'">删除</a></span>\
 								</div>\
 								</li>';
 						$(self).find('.menu').append(nodeStr);
 				}
 
 				$(self).find('.menu').append('<p class="clear"><a href="'+cartUrl+'">查看我的购物车</a></p>');
+
+				//发ajax删除
+
+				$.each($(".delCartDatas"), function(index, val) {
+					$(val).click(function(event) {
+						/* Act on the event */
+						var url=$(this).find('span a').attr('url');
+						//alert(url)
+						var self=this;
+
+
+						$.ajax({
+							url: url,
+							dataType: 'json',
+							success:function(result){
+								if(result.status==true){
+									$(self).parent().remove();
+										if($('#nav .my-cart .menu > li').size()==0){//没有商品显示没有了
+										$('.menu').find('p').remove();
+										$('.menu').append('<p class="clear">购物车中没有商品</p>');
+									}
+
+								}
+								//alert(result.status)
+
+							}
+						
+						});
+						
+
+
+
+					});
+				});
+
+
+
+				
 			}
 		});
 		
 	},function(){
+		setTimeout(function(){status=0},3000);
 		$(this).find('.menu').hide();
 	})
+
+
+
+
+
+
 })
+
+
+
+
 
 
 

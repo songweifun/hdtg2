@@ -159,23 +159,15 @@
 							<p class='clear'><a href="">清空最近浏览记录</a></p>
 						</ul>
 					</div>
-					<div  class='user-nav my-cart '>
+
+					<div  class='user-nav my-cart ' url="<?php echo U('Member/Cart/getHoverAjaxData');?>" cartUrl="<?php echo U('Member/Cart/index');?>" delUrl="<?php echo U('Member/Cart/delete');?>">
 						<a class='title' href="<?php echo U('Member/Cart/index');?>"><i>&nbsp;</i>购物车</a>
 						<ul class="menu">
-							<li>
-								<a class='image' href="">
-									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
-								</a>
-								<div>
-									<h4>
-										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
-									</h4>
-									<span><strong>¥25</strong><a href="">删除</a></span>
-								</div>					
-							</li>
-							<p class='clear'><a href="">查看我的购物车</a></p>
+							
+							
 						</ul>
 					</div>
+
 			</div>
 		</div>
 	</div> 

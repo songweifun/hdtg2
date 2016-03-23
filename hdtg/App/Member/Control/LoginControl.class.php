@@ -1,5 +1,5 @@
 <?php
-class LoginControl extends Control{
+class LoginControl extends CommonControl{
 	/**
 	 * 显示登录界面
 	 */	

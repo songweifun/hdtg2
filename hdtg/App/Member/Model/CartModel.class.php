@@ -90,6 +90,20 @@ public function updateGoodsNum($where,$num)
 	$this->where($where)->save(array("goods_num"=>$num));
 	return $this->getAffectedRows();
 }
+/**
+ * 登陆状态下删除购物车数据
+ * @Author   FSW<keepfun@163.com>
+ * @DateTime 2016-03-23T12:06:23+0800
+ * @param    [type]                   $where [description]
+ * @return   [type]                          [description]
+ */
+public function delCartDate($where)
+{
+	# code...
+	return $this->where($where)->delete();
+}
+
+
 }
 
 
