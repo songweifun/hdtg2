@@ -104,6 +104,27 @@ public function delCartDate($where)
 }
 
 
+
+/**
+ * 获得最近浏览的商品信息数组
+ * @Author   FSW<keepfun@163.com>
+ * @DateTime 2016-03-24T12:56:58+0800
+ * @param    [type]                   $where [description]
+ * @return   [type]                          [description]
+ */
+public function getResentViewData($where){
+	$field=array(
+			"gid",
+			"price",
+			"goods_img",
+			"end_time",
+			"main_title",
+			"old_price"
+		);
+	return $this->table('goods')->field($field)->in(array("gid"=>$where))->all();
+
+}
+
 }
 
 

@@ -8,6 +8,7 @@
    				
    				$this->gid=$this->_get('gid','intval');
           $this->db=K('goods');
+          $this->setRecentView();
 
    			}
 
@@ -49,14 +50,21 @@
           }
              //p($data['goods_server']);exit;
 
-
-
-
-
-
-
-
           return $data;
+        }
+
+
+
+        public function setRecentView(){
+          $key=encrypt('recent-view');
+          $value=isset($_COOKIE[$key])?unserialize(decrypt($_COOKIE[$key])):array();
+         if(in_array($this->gid, $value)==false){
+          array_unshift($value, $this->gid);
+         }
+         setcookie($key,encrypt(serialize($value)),time()+86400,'/');
+         //$value=unserialize(decrypt($_COOKIE[$key]));
+         //p($value);
+
         }
    }
 ?>

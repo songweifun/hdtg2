@@ -43,11 +43,101 @@ $(function(){
 		$(this).find('.menu').hide();
 	})
 	//最近浏览菜单切换
+	var resentRequestStatus=0;
 	$('#nav .recent-view').hover(function(){
 		$(this).find('.menu').show();
+		var url=$(this).attr('url');
+		var detailUrl=$(this).attr('detailUrl');
+		var clearUrl=$(this).attr('clearUrl');
+		//alert(clearUrl)
+		self=this;
+		
+		if(resentRequestStatus==1) return;
+		$.ajax({
+			url:url,
+			dataType:'json',
+			success:function(result){
+				resentRequestStatus=1;
+				var data=result.data;
+				if(result.status==true){
+					$(self).find('.menu').find('li').remove();
+		            $(self).find('.menu').find('p').remove();
+					
+					for(var i in data ){
+						var nodeStr='<li>\
+						<a class="image" href="'+detailUrl+'/gid/'+data[i]['gid']+'">\
+						<img src="'+data[i]['goods_img']+'" />\
+						</a>\
+						<div>\
+						<h4>\
+						<a href="'+detailUrl+'/gid/'+data[i]['gid']+'">'+data[i]['main_title']+'</a>\
+						</h4>\
+						<span><strong>¥'+data[i]['price']+'</strong><del>'+data[i]['old_price']+'</del></span>\
+						</div>\
+						</li>';
+
+						$(self).find('.menu').append(nodeStr);
+											
+					}
+					$(self).find('.menu').append('<p class="clear" ><a class="clearRecentView" href="javascript:void(0);">清空最近浏览记录</a></p>');
+
+
+
+
+
+					$(self).find('.menu').find('p').click(function(event) {
+							$.ajax({
+							url:clearUrl,
+							dataType:'json',
+							success:function (result){
+							
+							$('#nav .recent-view .menu').find('li').remove();
+							$('#nav .recent-view .menu').find('p').remove();
+							//alert(11111)
+							$(self).find('.menu').append('<p class="clear">最近没有浏览任何商品</p>');
+							
+							
+							}
+							
+							})
+					});
+
+				}else{
+
+					$(self).find('.menu').append('<p class="clear">'+result.data+'</p>');
+				}
+			}
+
+		});
+
+
+
+
+
 	},function(){
 		$(this).find('.menu').hide();
+		setTimeout(function(){resentRequestStatus=0},3000);
 	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//购物车菜单切换
 	var status=0;
 	$('#nav .my-cart').hover(function(){
@@ -136,6 +226,7 @@ $(function(){
 		});
 		
 	},function(){
+		//每隔3秒可以请求一次
 		setTimeout(function(){status=0},3000);
 		$(this).find('.menu').hide();
 	})

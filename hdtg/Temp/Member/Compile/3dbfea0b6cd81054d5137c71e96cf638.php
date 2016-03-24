@@ -1,4 +1,4 @@
-<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -98,10 +98,65 @@
 				
 				
 				<!-- 最近浏览 -->	
-					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' dtailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
+					<div  class='user-nav recent-view '>
 						<a class='title' href="">最近浏览</a>
 						<ul class="menu">
-							
+							<li>
+								<a class='image' href="">
+									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
+								</a>
+								<div>
+									<h4>
+										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
+									</h4>
+									<span><strong>¥25</strong><del>36</del></span>
+								</div>					
+							</li>
+							<li>
+								<a class='image' href="">
+									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
+								</a>
+								<div>
+									<h4>
+										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
+									</h4>
+									<span><strong>¥25</strong><del>36</del></span>
+								</div>					
+							</li>
+							<li>
+								<a class='image' href="">
+									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
+								</a>
+								<div>
+									<h4>
+										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
+									</h4>
+									<span><strong>¥25</strong><del>36</del></span>
+								</div>					
+							</li>
+							<li>
+								<a class='image' href="">
+									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
+								</a>
+								<div>
+									<h4>
+										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
+									</h4>
+									<span><strong>¥25</strong><del>36</del></span>
+								</div>					
+							</li>
+							<li>
+								<a class='image' href="">
+									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
+								</a>
+								<div>
+									<h4>
+										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
+									</h4>
+									<span><strong>¥25</strong><del>36</del></span>
+								</div>					
+							</li>
+							<p class='clear'><a href="">清空最近浏览记录</a></p>
 						</ul>
 					</div>
 
@@ -117,4 +172,29 @@
 		</div>
 	</div> 
 	<!-- 导航结束 -->
-	
+	<!-- 载入公共头部文件-->
+<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/userhome.css" type="text/css" rel="stylesheet" >
+<script type="text/javascript" src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/userhome.js"></script>	
+<div id="main">
+	<div class='left'>
+		<ul class='userhome-nav'>
+			<li class='active'>
+				<a href="">团购订单</a>
+			</li>
+			<li>
+				<a href="">我的收藏</a>
+			</li>
+			<li>
+				<a href="">我的评价</a>
+			</li>
+			<li>
+				<a href="">我的成长</a>
+			</li>
+			<li>
+				<a href="">美团余额</a>
+			</li>
+			<li>
+				<a href="">账户设置</a>
+			</li>
+		</ul>
+		<div id="content">
