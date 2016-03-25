@@ -119,55 +119,36 @@
 	<!-- 导航结束 -->
 	
 	<!-- 载入公共头部文件-->
-	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/login.css" type="text/css" rel="stylesheet" >
-	<!-- 页面主体开始 -->
-	<div id="login-box">
-		<h3>会员登录</h3>
-		<div class='left'>
-		<?php if($goodGid){?>
-			<form action="<?php echo U('Member/Login/login');?>/gid/<?php echo $goodGid;?>" method="post" >
-		<?php  }else{ ?>
-			<form action="<?php echo U('Member/Login/login');?>" method="post" >
-		<?php }?>
-			<div class='form'>
-				<dl>
-					<dt>账号:</dt>
-					<dd class='text'>
-						<input name="username"  type="text"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt>密码:</dt>
-					<dd class='text'>
-						<input name="password" type="password"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd>			
-						<label>
-							<input name="auto_login" type="checkbox"/> 下次自动登录
-						</label>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd class='submit'>
-						<input type="submit" value="登录">
-					</dd>
-				</dl>
+	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/buy.css" type="text/css" rel="stylesheet" >
+	<div class='position'>
+		<div id="main">
+			<div class='step'>
+				<ul>
+					<li>1.查看购物车 </li>
+					<li class='current'>2.选择支付方式 </li>
+					<li>3.购买成功 </li>
+				</ul>	
 			</div>
-			</form>
-		</div>
-		<div class='right'>
-			<p class='right-title'>尚未注册？</p>
-			<a class='reg-link' href="">免费注册</a>
-			<p class='open-title'>用合作网站账号登录</p>
-			<div class='open'>
-				<a class='open-login-link sina' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/weibo_login.png"></a>
-				<a class='open-login-link qq' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/qq_login.png"></a>
+			<ul class='buy-detail'>
+				<li>
+					<p>
+						<span>项目名称：</span>
+						耀莱成龙国际影城 — 电影票2张，周一至周五2D/3D/巨幕厅可兑
+					</p>
+					<p>
+						<span>商品数量：</span> 1
+					</p>
+				</li>
+			</ul>
+			<div class='total'>
+				<p>总价：<strong>21</strong></p>
+				<p>账户余额：<strong>21</strong></p>
+			</div>	
+			<!-- 订单提交 -->
+			<div class='bottom'>
+				<input type="submit" class='submit' value="确认支付">
 			</div>
 		</div>
-	</div>
+	</div>	
 </body>
 </html>

@@ -112,6 +112,26 @@ $(function(){
 
 
 
+// $('#nav .recent-view .menu').find('p').click(function(event) {
+// 							$.ajax({
+// 							url:clearUrl,
+// 							dataType:'json',
+// 							success:function (result){
+							
+// 							$('#nav .recent-view .menu').find('li').remove();
+// 							$('#nav .recent-view .menu').find('p').remove();
+// 							//alert(11111)
+// 							$(self).find('.menu').append('<p class="clear">最近没有浏览任何商品22222</p>');
+							
+							
+// 							}
+							
+// 							})
+// 					});
+
+
+
+
 
 
 	},function(){

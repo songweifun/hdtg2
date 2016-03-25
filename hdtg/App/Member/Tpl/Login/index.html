@@ -5,7 +5,11 @@
 	<div id="login-box">
 		<h3>会员登录</h3>
 		<div class='left'>
+		<if value="$goodGid">
+			<form action="{|U('Member/Login/login')}/gid/{$goodGid}" method="post" >
+		<else/>
 			<form action="{|U('Member/Login/login')}" method="post" >
+		</if>
 			<div class='form'>
 				<dl>
 					<dt>账号:</dt>

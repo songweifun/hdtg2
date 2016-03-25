@@ -24,7 +24,11 @@
 							</div>
 						</div>
 						<div class='deal-buy-cart'>
-							<a href="" class='buy'></a>
+						<if value="$userLogin">
+							<a href="{|U('Member/Buy/index')}/gid/{$data.gid}" class='buy'></a>
+						<else/>
+							<a href="{|U('Member/Login/index')}/gid/{$data.gid}" class='buy'></a>
+						</if>	
 							<a href="javascript:void(0)" url="{|U('Member/Cart/add')}/gid/{$data.gid}" id="cartId" class='cart'></a>
 						</div>
 						<div class='purchased'>

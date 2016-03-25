@@ -119,55 +119,85 @@
 	<!-- 导航结束 -->
 	
 	<!-- 载入公共头部文件-->
-	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/login.css" type="text/css" rel="stylesheet" >
-	<!-- 页面主体开始 -->
-	<div id="login-box">
-		<h3>会员登录</h3>
-		<div class='left'>
-		<?php if($goodGid){?>
-			<form action="<?php echo U('Member/Login/login');?>/gid/<?php echo $goodGid;?>" method="post" >
-		<?php  }else{ ?>
-			<form action="<?php echo U('Member/Login/login');?>" method="post" >
-		<?php }?>
-			<div class='form'>
-				<dl>
-					<dt>账号:</dt>
-					<dd class='text'>
-						<input name="username"  type="text"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt>密码:</dt>
-					<dd class='text'>
-						<input name="password" type="password"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd>			
-						<label>
-							<input name="auto_login" type="checkbox"/> 下次自动登录
-						</label>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd class='submit'>
-						<input type="submit" value="登录">
-					</dd>
-				</dl>
+	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/buy.css" type="text/css" rel="stylesheet" >
+	<div class='position'>
+		<div id="main">
+		<form action="<?php echo U('Member/Buy/payment');?>/gid/<?php echo $data['gid'];?>" method="post" >
+		<input type="hidden" name="gid" value="<?php echo $data['gid'];?>">
+		<input type="hidden" name="price" value="<?php echo $data['price'];?>">
+			<div class='step'>
+				<ul>
+					<li class='current'>1.查看购物车 </li>
+					<li>2.选择支付方式 </li>
+					<li>3.购买成功 </li>
+				</ul>	
 			</div>
-			</form>
-		</div>
-		<div class='right'>
-			<p class='right-title'>尚未注册？</p>
-			<a class='reg-link' href="">免费注册</a>
-			<p class='open-title'>用合作网站账号登录</p>
-			<div class='open'>
-				<a class='open-login-link sina' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/weibo_login.png"></a>
-				<a class='open-login-link qq' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/qq_login.png"></a>
+			<!-- 购物车列表 -->
+			<table class='buy-table' border=0>
+			<thead>
+				<tr>
+					<th>项目</th>
+					<th width='20%' style="text-align:left;">数量</th>
+					<th width='20%'>单价</th>
+					<th width='10%'>总价</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href=""><?php echo $data['main_title'];?></a>
+					</td>
+					<td class='goods-num'>
+						<a href="" class='reduce' id="reduce"></a>
+						<input id="num" name="goods_num" type="text" value=1> 
+						<a href="" class='add' id="add"></a>
+					</td>
+					<td><?php echo $data['price'];?></td>
+					<td><?php echo $data['price'];?></td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- 收货地址列表 -->
+			<div class='address-list'>
+			<table>
+				<thead>
+					<tr>
+						<th>选择</th>
+						<th width="20%">收货人</th>
+						<th>地址/邮编</th>
+						<th width="20%">电话/手机</th>
+						<th width="20%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php if(is_array($address)):?><?php  foreach($address as $v){ ?>
+					<tr>
+						<td>
+							<input type="radio" checked=true name="addressid" value="<?php echo $v['addressid'];?>">
+						</td>
+						<td>
+							<?php echo $v['consignee'];?>
+						</td>
+						<td>
+						<?php echo $v['province'];?>-<?php echo $v['city'];?>-<?php echo $v['county'];?>-<?php echo $v['street'];?>
+						</td>
+						<td>
+							<?php echo $v['tel'];?>
+						</td>
+						<td>
+							<a href="<?php echo U('Member/Account/delAddress');?>/addressid/<?php echo $v['addressid'];?>">删除</a>
+						</td>
+					</tr>
+					<?php }?><?php endif;?>
+				</tbody>
+			</table>	
+			</div>
+			<!-- 订单提交 -->
+			<div class='bottom'>
+				<input type="submit" class='submit' value="提交订单">
 			</div>
 		</div>
-	</div>
+		</form>
+	</div>	
 </body>
 </html>

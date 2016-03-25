@@ -1,9 +1,24 @@
 <?php
 class LoginControl extends CommonControl{
+
+	// public $goodGid;
+
+	// public function __auto(){
+
+	// 	$this->goodGid=$this->_get('gid','intval');
+	// 	//echo $this->goodGid;
+	// 	//echo 11111111111111111;
+	// 	//$this->goodGid=isset($this->_get('gid','intval'))?$this->_get('gid'):null;
+	// }
+
+
 	/**
 	 * 显示登录界面
 	 */	
 	public function index(){
+		$gid=$this->_get('gid','intval');
+		$this->assign('goodGid',$gid);
+		//echo $this->goodGid;
 		$this->display();
 	}
 	
@@ -13,6 +28,7 @@ class LoginControl extends CommonControl{
 	public function login(){
            if(IS_POST===FALSE){ throw new Exception("非法请求");};
            //echo C('COOKIE_LIFT_TIME');exit;
+           $goodGid=$this->_get('gid','intval');
 			$uname=$this->_post('username',"strip_tags");
 			$password=$this->_post("password","md5");
            //p($_POST);exit;
@@ -29,7 +45,14 @@ class LoginControl extends CommonControl{
                       setcookie(session_name(), session_id(), time()+C('COOKIE_LIFT_TIME'), "/");
                                                                             
                        }
-                  $this->success("登陆成功",U('Index/Index/index'));
+                       
+                       if($goodGid){
+                       	$this->success("登陆成功",U('Index/Detail/index')."/gid/".$goodGid);
+                  
+              }else{
+              		
+              		$this->success("登陆成功",U('Index/Index/index'));
+              }
                                                                        
                                                                         
 			}else{

@@ -98,7 +98,7 @@
 				
 				
 				<!-- 最近浏览 -->	
-					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' dtailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
+					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' detailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
 						<a class='title' href="">最近浏览</a>
 						<ul class="menu">
 							

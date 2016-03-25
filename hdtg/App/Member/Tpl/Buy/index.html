@@ -3,6 +3,9 @@
 	<link href="__PUBLIC__/css/buy.css" type="text/css" rel="stylesheet" >
 	<div class='position'>
 		<div id="main">
+		<form action="{|U('Member/Buy/payment')}/gid/{$data.gid}" method="post" >
+		<input type="hidden" name="gid" value="{$data.gid}">
+		<input type="hidden" name="price" value="{$data.price}">
 			<div class='step'>
 				<ul>
 					<li class='current'>1.查看购物车 </li>
@@ -23,23 +26,59 @@
 			<tbody>
 				<tr>
 					<td>
-						<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+						<a href="">{$data.main_title}</a>
 					</td>
 					<td class='goods-num'>
 						<a href="" class='reduce' id="reduce"></a>
-						<input id="num" type="text" value=1> 
+						<input id="num" name="goods_num" type="text" value=1> 
 						<a href="" class='add' id="add"></a>
 					</td>
-					<td>-</td>
-					<td>12</td>
+					<td>{$data.price}</td>
+					<td>{$data.price}</td>
 				</tr>
 			</tbody>
 			</table>
+			<!-- 收货地址列表 -->
+			<div class='address-list'>
+			<table>
+				<thead>
+					<tr>
+						<th>选择</th>
+						<th width="20%">收货人</th>
+						<th>地址/邮编</th>
+						<th width="20%">电话/手机</th>
+						<th width="20%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach from="$address" value="$v">
+					<tr>
+						<td>
+							<input type="radio" checked=true name="addressid" value="{$v.addressid}">
+						</td>
+						<td>
+							{$v.consignee}
+						</td>
+						<td>
+						{$v.province}-{$v.city}-{$v.county}-{$v.street}
+						</td>
+						<td>
+							{$v.tel}
+						</td>
+						<td>
+							<a href="{|U('Member/Account/delAddress')}/addressid/{$v.addressid}">删除</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>	
+			</div>
 			<!-- 订单提交 -->
 			<div class='bottom'>
 				<input type="submit" class='submit' value="提交订单">
 			</div>
 		</div>
+		</form>
 	</div>	
 </body>
 </html>

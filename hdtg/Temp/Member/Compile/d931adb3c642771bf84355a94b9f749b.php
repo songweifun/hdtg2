@@ -1,4 +1,4 @@
-<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>	<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -117,56 +117,164 @@
 		</div>
 	</div> 
 	<!-- 导航结束 -->
-	
 	<!-- 载入公共头部文件-->
-	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/login.css" type="text/css" rel="stylesheet" >
-	<!-- 页面主体开始 -->
-	<div id="login-box">
-		<h3>会员登录</h3>
-		<div class='left'>
-		<?php if($goodGid){?>
-			<form action="<?php echo U('Member/Login/login');?>/gid/<?php echo $goodGid;?>" method="post" >
-		<?php  }else{ ?>
-			<form action="<?php echo U('Member/Login/login');?>" method="post" >
-		<?php }?>
-			<div class='form'>
-				<dl>
-					<dt>账号:</dt>
-					<dd class='text'>
-						<input name="username"  type="text"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt>密码:</dt>
-					<dd class='text'>
-						<input name="password" type="password"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd>			
-						<label>
-							<input name="auto_login" type="checkbox"/> 下次自动登录
-						</label>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd class='submit'>
-						<input type="submit" value="登录">
-					</dd>
-				</dl>
-			</div>
-			</form>
+<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/userhome.css" type="text/css" rel="stylesheet" >
+<script type="text/javascript" src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/userhome.js"></script>	
+<div id="main">
+	<div class='left'>
+		<ul class='userhome-nav'>
+			<li class='active'>
+				<a href="">团购订单</a>
+			</li>
+			<li>
+				<a href="">我的收藏</a>
+			</li>
+			<li>
+				<a href="">我的评价</a>
+			</li>
+			<li>
+				<a href="">我的成长</a>
+			</li>
+			<li>
+				<a href="">美团余额</a>
+			</li>
+			<li>
+				<a href="">账户设置</a>
+			</li>
+		</ul>
+		<div id="content">
+		<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/order.css" type="text/css" rel="stylesheet" >
+		<div class='order-nav'>
+			<a href="" class='active'>全部</a>
+			<a href="">未使用</a>
+			<a href="">即将到期</a>
+			<a href="">待付款</a>
+			<a href="">待评价</a>
+			<a href="">已使用</a>
+			<a href="">已过期</a>
+			<a href="">已退款</a>
 		</div>
-		<div class='right'>
-			<p class='right-title'>尚未注册？</p>
-			<a class='reg-link' href="">免费注册</a>
-			<p class='open-title'>用合作网站账号登录</p>
-			<div class='open'>
-				<a class='open-login-link sina' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/weibo_login.png"></a>
-				<a class='open-login-link qq' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/qq_login.png"></a>
-			</div>
+		<div class='order-list'>
+			<table>
+				<thead>
+					<tr>
+						<th width="50%">团购项目</th>
+						<th width="10%">数量</th>
+						<th width="10%">金额</th>
+						<th width="15%">订单状态</th>
+						<th width="15%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class='goods-show'>
+							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
+							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+						</td>
+						<td>
+							1
+						</td>
+						<td>
+							¥3.90
+						</td>
+						<td>
+							<span>未付款</span><br/>
+							<a href="" >订单详情</a>
+						</td>
+						<td>
+							<a class='btn' href="">付款</a><br/>
+							<a href="">删除订单</a>
+						</td>
+					</tr>
+					<tr>
+						<td class='goods-show'>
+							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
+							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+						</td>
+						<td>
+							1
+						</td>
+						<td>
+							¥3.90
+						</td>
+						<td>
+							<span>未付款</span><br/>
+							<a href="" >订单详情</a>
+						</td>
+						<td>
+							<a class='btn' href="">付款</a><br/>
+							<a href="">删除订单</a>
+						</td>
+					</tr><tr>
+						<td class='goods-show'>
+							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
+							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+						</td>
+						<td>
+							1
+						</td>
+						<td>
+							¥3.90
+						</td>
+						<td>
+							<span>未付款</span><br/>
+							<a href="" >订单详情</a>
+						</td>
+						<td>
+							<a class='btn' href="">付款</a><br/>
+							<a href="">删除订单</a>
+						</td>
+					</tr><tr>
+						<td class='goods-show'>
+							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
+							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+						</td>
+						<td>
+							1
+						</td>
+						<td>
+							¥3.90
+						</td>
+						<td>
+							<span>未付款</span><br/>
+							<a href="" >订单详情</a>
+						</td>
+						<td>
+							<a class='btn' href="">付款</a><br/>
+							<a href="">删除订单</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>			</div>
+		</div>
+		<div class='user-status'>
+			<h6><span>Hi~</span>_qqcd71349674843</h6>
+			<p><span>等级：<span><i></i></p>
+			<p><span>积分：<span><strong>0</strong></p>
 		</div>
 	</div>
 </body>

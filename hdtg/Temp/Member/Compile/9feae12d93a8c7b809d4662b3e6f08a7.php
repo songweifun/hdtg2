@@ -1,4 +1,4 @@
-<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>	<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -117,56 +117,126 @@
 		</div>
 	</div> 
 	<!-- 导航结束 -->
-	
 	<!-- 载入公共头部文件-->
-	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/login.css" type="text/css" rel="stylesheet" >
-	<!-- 页面主体开始 -->
-	<div id="login-box">
-		<h3>会员登录</h3>
-		<div class='left'>
-		<?php if($goodGid){?>
-			<form action="<?php echo U('Member/Login/login');?>/gid/<?php echo $goodGid;?>" method="post" >
-		<?php  }else{ ?>
-			<form action="<?php echo U('Member/Login/login');?>" method="post" >
-		<?php }?>
-			<div class='form'>
-				<dl>
-					<dt>账号:</dt>
-					<dd class='text'>
-						<input name="username"  type="text"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt>密码:</dt>
-					<dd class='text'>
-						<input name="password" type="password"/>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd>			
-						<label>
-							<input name="auto_login" type="checkbox"/> 下次自动登录
-						</label>
-					</dd>
-				</dl>
-				<dl>
-					<dt></dt>
-					<dd class='submit'>
-						<input type="submit" value="登录">
-					</dd>
-				</dl>
-			</div>
-			</form>
+<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/userhome.css" type="text/css" rel="stylesheet" >
+<script type="text/javascript" src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/userhome.js"></script>	
+<div id="main">
+	<div class='left'>
+		<ul class='userhome-nav'>
+			<li class='active'>
+				<a href="">团购订单</a>
+			</li>
+			<li>
+				<a href="">我的收藏</a>
+			</li>
+			<li>
+				<a href="">我的评价</a>
+			</li>
+			<li>
+				<a href="">我的成长</a>
+			</li>
+			<li>
+				<a href="">美团余额</a>
+			</li>
+			<li>
+				<a href="">账户设置</a>
+			</li>
+		</ul>
+		<div id="content">
+		<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/account.css" type="text/css" rel="stylesheet" >
+		<div class='setting-nav'>
+			<a class='active' href="">基本信息</a>
+			<a href="">收货地址</a>
 		</div>
-		<div class='right'>
-			<p class='right-title'>尚未注册？</p>
-			<a class='reg-link' href="">免费注册</a>
-			<p class='open-title'>用合作网站账号登录</p>
-			<div class='open'>
-				<a class='open-login-link sina' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/weibo_login.png"></a>
-				<a class='open-login-link qq' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/qq_login.png"></a>
+		<div class='address-list'>
+			<table>
+				<thead>
+					<tr>
+						<th width="20%">收货人</th>
+						<th>地址/邮编</th>
+						<th width="20%">电话/手机</th>
+						<th width="20%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							郑印
+						</td>
+						<td>
+							北京 北京 朝阳区 小营路四方大厦，100000
+						</td>
+						<td>
+							158****9630
+						</td>
+						<td>
+							<a href="">删除</a>
+							<a href="">修改</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							郑印
+						</td>
+						<td>
+							北京 北京 朝阳区 小营路四方大厦，100000
+						</td>
+						<td>
+							158****9630
+						</td>
+						<td>
+							<a href="">删除</a>
+							<a href="">修改</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+		<!-- 收货地址 -->
+		<div id="addressForm" class="address">
+			<div class='address-base'>
+				<dl>
+					<dt>*省市区：</dt>
+					<dd style="width:400px;">
+						<select id="s_province" name="s_province"></select>
+						<select id="s_city" name="s_city" ></select>
+						<select id="s_county" name="s_county"></select>
+						<script type="text/javascript" src="http://localhost/hdtg2/classLibs/area/area.js"></script>
+						<script type="text/javascript">_init_area();</script>
+					</dd>
+				</dl>
+				<dl>
+					<dt>*街道地址：</dt>
+					<dd style="width:450px;">
+						<input name="" type="text" value="">
+					</dd>
+				</dl>
+				<dl>
+					<dt>*邮政编码：</dt>
+					<dd>
+						<input name="" type="text" value="">
+					</dd>
+				</dl>
+				<dl>
+					<dt>*收货人姓名：</dt>
+					<dd>
+						<input name="" type="text" value="">
+					</dd>
+				</dl>
+				<dl>
+					<dt>*电话号码：</dt>
+					<dd>
+						<input type="text" value=""> 
+					</dd>
+				</dl>
 			</div>
+		</div>	
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>			</div>
+		</div>
+		<div class='user-status'>
+			<h6><span>Hi~</span>_qqcd71349674843</h6>
+			<p><span>等级：<span><i></i></p>
+			<p><span>积分：<span><strong>0</strong></p>
 		</div>
 	</div>
 </body>

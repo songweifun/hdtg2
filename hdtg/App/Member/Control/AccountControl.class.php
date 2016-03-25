@@ -3,7 +3,7 @@
  * 用户账户管理控制器
  * @author zhengyin
  */
-class AccountControl extends Control{
+class AccountControl extends CommonControl{
 
 	/**
 	 * 显示账户余额
