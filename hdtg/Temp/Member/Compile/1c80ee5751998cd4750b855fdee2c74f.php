@@ -121,6 +121,7 @@
 	<!-- 载入公共头部文件-->
 	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/buy.css" type="text/css" rel="stylesheet" >
 	<div class='position'>
+		<form action="<?php echo U('Member/Buy/checkOrder');?>" method="post">
 		<div id="main">
 			<div class='step'>
 				<ul>
@@ -130,25 +131,29 @@
 				</ul>	
 			</div>
 			<ul class='buy-detail'>
+				<?php if(is_array($order)):?><?php  foreach($order as $v){ ?>
+					<input type="hidden"name="orderid[]" value="<?php echo $v['orderid'];?>">
 				<li>
 					<p>
 						<span>项目名称：</span>
-						耀莱成龙国际影城 — 电影票2张，周一至周五2D/3D/巨幕厅可兑
+						<?php echo $v['main_title'];?>
 					</p>
 					<p>
-						<span>商品数量：</span> 1
+						<span>商品数量：</span> <?php echo $v['goods_num'];?>
 					</p>
 				</li>
+				<?php }?><?php endif;?>
 			</ul>
 			<div class='total'>
-				<p>总价：<strong>21</strong></p>
-				<p>账户余额：<strong>21</strong></p>
+				<p>总价：<strong><?php echo $sum;?></strong></p>
+				<p>账户余额：<strong><?php echo $balance;?></strong></p>
 			</div>	
 			<!-- 订单提交 -->
 			<div class='bottom'>
 				<input type="submit" class='submit' value="确认支付">
 			</div>
 		</div>
+		</form>
 	</div>	
 </body>
 </html>

@@ -120,6 +120,7 @@
 	
 	<!-- 载入公共头部文件-->
 	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/buy.css" type="text/css" rel="stylesheet" >
+	<script src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/goodnum.js"></script>
 	<div class='position'>
 		<div id="main">
 		<form action="<?php echo U('Member/Buy/payment');?>/gid/<?php echo $data['gid'];?>" method="post" >
@@ -148,12 +149,12 @@
 						<a href=""><?php echo $data['main_title'];?></a>
 					</td>
 					<td class='goods-num'>
-						<a href="" class='reduce' id="reduce"></a>
-						<input id="num" name="goods_num" type="text" value=1> 
-						<a href="" class='add' id="add"></a>
+						<a href="javascript:void(0);" class='reduce' id="reduce"></a>
+						<input id="num" name="goods_num" class="num" type="text" value=1>
+						<a href="javascript:void(0);" class='add' id="add"></a>
 					</td>
-					<td><?php echo $data['price'];?></td>
-					<td><?php echo $data['price'];?></td>
+					<td class="price"><?php echo $data['price'];?></td>
+					<td class="totals"><?php echo $data['price'];?></td>
 				</tr>
 			</tbody>
 			</table>

@@ -28,7 +28,7 @@ class DbMysqli extends Db
     {
         if (is_null(self::$dbLink)) {
             self::$dbLink = new mysqli(C("DB_HOST"), C("DB_USER"), C("DB_PASSWORD"), C("DB_DATABASE"), intval(C("DB_PORT")));
-            if (mysqli_connect_errno()) {
+            if (mysqli_connect_error()) {
                 error(mysqli_connect_error() . L("mysqlidriver_connectDb"), false); //数据库连接出错了请检查配置文件中的参数
             }
             self::setCharts();

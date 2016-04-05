@@ -33,6 +33,14 @@ class CartControl extends CommonControl{
 
 
 	public function index(){
+		//查询收货地址数据
+		$db=K('Address');
+		$uid= $_SESSION[C('RBAC_AUTH_KEY')];
+		if($address=$db->getUserAdresses($uid)){
+			//p($address);
+			$this->assign('address',$address);
+		}
+
 		$result=$this->getCartData();
 		$this->assign("carts",$result[0]);
 		$this->assign("total",$result[1]);

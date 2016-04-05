@@ -1,6 +1,7 @@
 	<load file="./Public/tpl/header.html"/>
 	<!-- 载入公共头部文件-->
 	<link href="__PUBLIC__/css/buy.css" type="text/css" rel="stylesheet" >
+	<script src="__PUBLIC__/js/goodnum.js"></script>
 	<div class='position'>
 		<div id="main">
 		<form action="{|U('Member/Buy/payment')}/gid/{$data.gid}" method="post" >
@@ -29,12 +30,12 @@
 						<a href="">{$data.main_title}</a>
 					</td>
 					<td class='goods-num'>
-						<a href="" class='reduce' id="reduce"></a>
-						<input id="num" name="goods_num" type="text" value=1> 
-						<a href="" class='add' id="add"></a>
+						<a href="javascript:void(0);" class='reduce' id="reduce"></a>
+						<input id="num" name="goods_num" class="num" type="text" value=1>
+						<a href="javascript:void(0);" class='add' id="add"></a>
 					</td>
-					<td>{$data.price}</td>
-					<td>{$data.price}</td>
+					<td class="price">{$data.price}</td>
+					<td class="totals">{$data.price}</td>
 				</tr>
 			</tbody>
 			</table>

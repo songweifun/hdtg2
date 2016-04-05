@@ -22,6 +22,7 @@ class RegControl extends CommonControl{
 		# code...
 		$code=new Code();
 		$code->show();
+		echo 111111111;
 	}
 	
 	//ajax验证

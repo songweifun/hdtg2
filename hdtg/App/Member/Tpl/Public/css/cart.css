@@ -303,3 +303,37 @@
 	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
 }
 
+/****************** 收货地址  ************************/
+
+#main .address-list table{
+	width:100%;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#main .address-list table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+}
+#main .address-list table thead th{
+	text-indent:10px;
+	font-size:14px;
+	text-align:center;
+}
+#main .address-list table tbody{
+	width:100%;
+	height:auto;
+}
+#main .address-list table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd;
+}
+#main .address-list table tbody tr td{
+	text-align:center;
+}
+#main .address-list table tbody tr td a{
+	color:#11bbbb;
+}

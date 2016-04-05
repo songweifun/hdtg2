@@ -120,8 +120,9 @@
 	
 	<!-- 载入公共头部文件-->
 	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/cart.css" type="text/css" rel="stylesheet" >
-	<script src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/cart.js"></script>
 
+	<script src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/cart.js"></script>
+	<form action="<?php echo U('Member/Buy/payment');?>" method="post">
 	<div id="main">
 		<div class='step'>
 			<div class='cart-title'>
@@ -158,7 +159,9 @@
 			</thead>
 			<tbody>
 			<?php if(is_array($carts)):?><?php  foreach($carts as $v){ ?>
-				<tr>
+				<input type="hidden" name="gid[]" value="<?php echo $v['gid'];?>">
+				<input type="hidden" name="price[]" value="<?php echo $v['price'];?>">
+				<tr>v
 					<td class='goods-show'>
 						<img src="<?php echo $v['goods_img'];?>">
 						<a href="<?php echo U('Index/Detail/index');?>/gid/<?php echo $v['gid'];?>"><?php echo $v['main_title'];?></a>
@@ -166,7 +169,7 @@
 					<td><?php echo $v['status'];?></td>
 					<td class='goods-num'>
 						<a href="javascript:void(0);" url="<?php echo U('Member/Cart/getAjaxData');?>/gid/<?php echo $v['gid'];?>" gid="<?php echo $v['gid'];?>" class='reduce' id="reduce"></a>
-						<input id="num" type="text" value=<?php echo $v['num'];?> class="num"> 
+						<input id="num" type="text" value=<?php echo $v['num'];?> class="num" name="goods_num[]">
 						<a href="javascript:void(0);" url="<?php echo U('Member/Cart/getAjaxData');?>/gid/<?php echo $v['gid'];?>" gid="<?php echo $v['gid'];?>" class='add' id="add"></a>
 					</td>
 					<td class="price"><?php echo $v['price'];?></td>
@@ -184,63 +187,46 @@
 				</tr>
 			</tbody>
 		</table>
-		<!-- 收货地址 -->
-		<div class="address">
-			<div class='address-hd'>
-				收货地址<a href="">管理</a>
-			</div>
-			<div class='address-base'>
-				<dl>
-					<dt>*省市区：</dt>
-					<dd>
-						<select id="s_province" name="s_province"></select>
-						<select id="s_city" name="s_city" ></select>
-						<select id="s_county" name="s_county"></select>
-						<script type="text/javascript" src="http://localhost/hdtg2/classLibs/area/area.js"></script>
-						<script type="text/javascript">_init_area();</script>
-					</dd>
-				</dl>
-				<dl>
-					<dt>*街道地址：</dt>
-					<dd style="width:450px;">
-						<input name="" type="text" value="">
-					</dd>
-				</dl>
-				<dl>
-					<dt>*邮政编码：</dt>
-					<dd>
-						<input name="" type="text" value="">
-					</dd>
-				</dl>
-				<dl>
-					<dt>*收货人姓名：</dt>
-					<dd>
-						<input name="" type="text" value="">
-					</dd>
-				</dl>
-				<dl>
-					<dt>*电话号码：</dt>
-					<dd>
-						<input type="text" value=""> 
-					</dd>
-				</dl>
-			</div>
-			<div class='sh-time'>
-				<p class='sh-time-title'>希望送货的时间</p>
-				<p><input type="radio" name="time">只工作日送货(双休日、假日不用送，写字楼/商用地址客户请选择)</p>
-				<p><input type="radio" name="time">只双休日、假日送货(工作日不用送)</p>
-				<p><input type="radio" name="time">学校地址/地址白天没人，请尽量安排其它时间送货 (特别安排可能会超出预计送货天数)</p>
-				<p><input type="radio" name="time">工作日、双休日与假日均可送货</p>
-			</div>
-			<div class='remark'>
-				<p>配送说明<span>（快递公司由商家根据情况选择，请不要指定。其他要求会尽量协调）</span></p>
-				<input type="text" >
-			</div>
+		<!-- 收货地址列表 -->
+		<div class='address-list'>
+			<table>
+				<thead>
+				<tr>
+					<th>选择</th>
+					<th width="20%">收货人</th>
+					<th>地址/邮编</th>
+					<th width="20%">电话/手机</th>
+					<th width="20%">操作</th>
+				</tr>
+				</thead>
+				<tbody>
+				<?php if(is_array($address)):?><?php  foreach($address as $v){ ?>
+					<tr>
+						<td>
+							<input type="radio" checked=true name="addressid" value="<?php echo $v['addressid'];?>">
+						</td>
+						<td>
+							<?php echo $v['consignee'];?>
+						</td>
+						<td>
+							<?php echo $v['province'];?>-<?php echo $v['city'];?>-<?php echo $v['county'];?>-<?php echo $v['street'];?>
+						</td>
+						<td>
+							<?php echo $v['tel'];?>
+						</td>
+						<td>
+							<a href="<?php echo U('Member/Account/delAddress');?>/addressid/<?php echo $v['addressid'];?>">删除</a>
+						</td>
+					</tr>
+				<?php }?><?php endif;?>
+				</tbody>
+			</table>
 		</div>
 		<!-- 订单提交 -->
 		<div class='bottom'>
 			<input type="submit" class='submit' value="提交订单">
 		</div>
 	</div>
+	</form>
 </body>
 </html>

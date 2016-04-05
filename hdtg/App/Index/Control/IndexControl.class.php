@@ -32,6 +32,8 @@ class IndexControl extends CommonControl{
 
 
     function index(){
+		echo session_save_path();
+			echo 111111111111;
 			$this->setCategory();
 			$this->setLocality();
 			$this->setPrice();
