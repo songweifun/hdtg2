@@ -30,6 +30,7 @@ class BuyControl extends CommonControl{
 	public function payment(){
 		//p($_POST);exit;
 		if(IS_POST===true){
+			if(!isset($_POST['gid'])) $this->error("购物车没有商品",U('Index/Index/index'));
 		if(is_array($_POST['gid'])){//购物车提交数据
 			$data=$_POST;
 			/*foreach($_POST['gid'] as $k=>$v){
@@ -70,7 +71,15 @@ class BuyControl extends CommonControl{
 
 		}
 	}
-		$result=$this->getOrderData($this->uid);//获得订单数据
+
+		$gid=$this->_get('gid','intval',null);
+		if(!is_null($gid)) {
+			$where = array("user_id" => $this->uid, "status" => 1, "goods_id" =>$gid);//组合查询订单条件
+		}else{
+			$where = array("user_id" => $this->uid, "status" => 1);//组合查询订单条件
+
+		}
+		$result=$this->getOrderData($where);//获得订单数据
 
 		$sumArr=array();
 		foreach($result as $v){
@@ -124,9 +133,9 @@ class BuyControl extends CommonControl{
 	/**
 	 * 获得订单数据
 	 */
-	private function getOrderData(){
+	private function getOrderData($where){
 		$db=K('Order');
-		return $db->getOrderData($this->uid);
+		return $db->getOrderData($where);
 
 
 	}
@@ -173,6 +182,23 @@ class BuyControl extends CommonControl{
 		}else{
 
 			$this->error("付款失败",U('Index/Index/index'));
+		}
+	}
+
+
+
+	/**
+	 * 删除订单
+	 */
+	public function delOrder(){
+		if(!$this->uid) exit('非法操作');
+		$orderid=$this->_get('oid','intval',null);
+		$where=array("user_id"=>$this->uid,"orderid"=>$orderid);
+		$db=K('Order');
+		if($db->delOneOrder($where)){
+			$this->success('删除订单成功',U('Member/Order/index'));
+		}else{
+			$this->error('删除订单失败',U('Member/Order/index'));
 		}
 	}
 }

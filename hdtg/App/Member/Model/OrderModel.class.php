@@ -21,7 +21,7 @@ return $this->add($data);
   * @param $uid
   * @return mixed
   */
- public function getOrderData($uid){
+ public function getOrderData($where){
   $this->view=array(
     "goods"=>array(
         "type"=>"inner",
@@ -35,11 +35,13 @@ return $this->add($data);
     "price",
     "gid",
     "goods_num",
-    "orderid"
+    "orderid",
+   "goods_img",
+   "status"
 
   );
 
-  return $this->field($filed)->where(array("user_id"=>$uid,"status"=>1))->select();
+  return $this->field($filed)->where($where)->select();
  }
 
  /**
@@ -78,6 +80,15 @@ return $this->add($data);
   */
  public function checkNopayOrder($where){
   return $this->where($where)->count();
+ }
+
+ /**
+  * 删除订单
+  * @param $where
+  * @return mixed
+  */
+ public function delOneOrder($where){
+  return $this->where($where)->del();
  }
 
 }

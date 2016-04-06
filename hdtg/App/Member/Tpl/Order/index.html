@@ -1,7 +1,9 @@
 <load file="./hdtg/App/Member/Tpl/Common/userhome-hd.html" />
 		<link href="__PUBLIC__/css/order.css" type="text/css" rel="stylesheet" >
 		<div class='order-nav'>
-			<a href="" class='active'>全部</a>
+			<a href="{|U('Member/Order/index')}" class='active'>全部</a>
+			<a href="{|U('Member/Order/index')}/status/2">已付款</a>
+			<a href="{|U('Member/Order/index')}/status/1">未付款</a>
 			<a href="">未使用</a>
 			<a href="">即将到期</a>
 			<a href="">待付款</a>
@@ -11,6 +13,7 @@
 			<a href="">已退款</a>
 		</div>
 		<div class='order-list'>
+			<if value="$order">
 			<table>
 				<thead>
 					<tr>
@@ -22,86 +25,37 @@
 					</tr>
 				</thead>
 				<tbody>
+
+				<foreach from="$order" value="$v">
 					<tr>
 						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+							<img src="{$v.goods_img}">
+							<a href="{|U('Index/Detail/index')}/gid/{$v.gid}">{$v.main_title}</a>
 						</td>
 						<td>
-							1
+							{$v.goods_num}
 						</td>
 						<td>
-							¥3.90
+							¥{$v.xiaoji}
 						</td>
 						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
+							<span>{$v.status}</span><br/>
+							<a href="{|U('Index/Detail/index')}/gid/{$v.gid}" >订单详情</a>
 						</td>
 						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
+							<if value="$v['status'] eq '未付款'">
+							<a class='btn' href="{|U('Member/Buy/payment')}/gid/{$v.gid}">付款</a><br/>
+							</if>
+							<a href="{|U('Member/Buy/delOrder')}/oid/{$v.orderid}">删除订单</a>
 						</td>
 					</tr>
-					<tr>
-						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
-						</td>
-						<td>
-							1
-						</td>
-						<td>
-							¥3.90
-						</td>
-						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
-						</td>
-						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
-						</td>
-					</tr><tr>
-						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
-						</td>
-						<td>
-							1
-						</td>
-						<td>
-							¥3.90
-						</td>
-						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
-						</td>
-						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
-						</td>
-					</tr><tr>
-						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
-						</td>
-						<td>
-							1
-						</td>
-						<td>
-							¥3.90
-						</td>
-						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
-						</td>
-						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
-						</td>
-					</tr>
+				</foreach>
+
 				</tbody>
-			</table>	
+			</table>
+				<else/>
+				没有任何订单信息!
+			</if>
 		</div>
 		
 		

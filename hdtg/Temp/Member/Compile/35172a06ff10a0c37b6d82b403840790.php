@@ -101,7 +101,7 @@
 					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' detailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
 						<a class='title' href="">最近浏览</a>
 						<ul class="menu">
-							
+							<p class="clear">最近没有浏览任何商品</p>
 						</ul>
 					</div>
 
@@ -122,6 +122,14 @@
 	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/cart.css" type="text/css" rel="stylesheet" >
 
 	<script src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/cart.js"></script>
+
+	<?php if($userLogin){?>
+		<form action="<?php echo U('Member/Buy/payment');?>" method="post">
+		<?php  }else{ ?>
+		<form action="<?php echo U('Member/Login/index');?>" method="post">
+	<?php }?>
+
+
 	<form action="<?php echo U('Member/Buy/payment');?>" method="post">
 	<div id="main">
 		<div class='step'>

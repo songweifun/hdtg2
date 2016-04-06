@@ -104,7 +104,7 @@ $(function(){
 
 				}else{
 
-					$(self).find('.menu').append('<p class="clear">'+result.data+'</p>');
+					//$(self).find('.menu').append('<p class="clear">'+result.data+'</p>');
 				}
 			}
 

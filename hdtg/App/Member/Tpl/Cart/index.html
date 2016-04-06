@@ -3,6 +3,14 @@
 	<link href="__PUBLIC__/css/cart.css" type="text/css" rel="stylesheet" >
 
 	<script src="__PUBLIC__/js/cart.js"></script>
+
+	<if value="$userLogin">
+		<form action="{|U('Member/Buy/payment')}" method="post">
+		<else/>
+		<form action="{|U('Member/Login/index')}" method="post">
+	</if>
+
+
 	<form action="{|U('Member/Buy/payment')}" method="post">
 	<div id="main">
 		<div class='step'>

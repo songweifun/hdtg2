@@ -101,7 +101,7 @@
 					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' detailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
 						<a class='title' href="">最近浏览</a>
 						<ul class="menu">
-							
+							<p class="clear">最近没有浏览任何商品</p>
 						</ul>
 					</div>
 
@@ -145,7 +145,9 @@
 		<div id="content">
 		<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/order.css" type="text/css" rel="stylesheet" >
 		<div class='order-nav'>
-			<a href="" class='active'>全部</a>
+			<a href="<?php echo U('Member/Order/index');?>" class='active'>全部</a>
+			<a href="<?php echo U('Member/Order/index');?>/status/2">已付款</a>
+			<a href="<?php echo U('Member/Order/index');?>/status/1">未付款</a>
 			<a href="">未使用</a>
 			<a href="">即将到期</a>
 			<a href="">待付款</a>
@@ -155,6 +157,7 @@
 			<a href="">已退款</a>
 		</div>
 		<div class='order-list'>
+			<?php if($order){?>
 			<table>
 				<thead>
 					<tr>
@@ -166,86 +169,37 @@
 					</tr>
 				</thead>
 				<tbody>
+
+				<?php if(is_array($order)):?><?php  foreach($order as $v){ ?>
 					<tr>
 						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+							<img src="<?php echo $v['goods_img'];?>">
+							<a href="<?php echo U('Index/Detail/index');?>/gid/<?php echo $v['gid'];?>"><?php echo $v['main_title'];?></a>
 						</td>
 						<td>
-							1
+							<?php echo $v['goods_num'];?>
 						</td>
 						<td>
-							¥3.90
+							¥<?php echo $v['xiaoji'];?>
 						</td>
 						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
+							<span><?php echo $v['status'];?></span><br/>
+							<a href="<?php echo U('Index/Detail/index');?>/gid/<?php echo $v['gid'];?>" >订单详情</a>
 						</td>
 						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
+							<?php if($v['status'] == '未付款'){?>
+							<a class='btn' href="<?php echo U('Member/Buy/payment');?>/gid/<?php echo $v['gid'];?>">付款</a><br/>
+							<?php }?>
+							<a href="<?php echo U('Member/Buy/delOrder');?>/oid/<?php echo $v['orderid'];?>">删除订单</a>
 						</td>
 					</tr>
-					<tr>
-						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
-						</td>
-						<td>
-							1
-						</td>
-						<td>
-							¥3.90
-						</td>
-						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
-						</td>
-						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
-						</td>
-					</tr><tr>
-						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
-						</td>
-						<td>
-							1
-						</td>
-						<td>
-							¥3.90
-						</td>
-						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
-						</td>
-						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
-						</td>
-					</tr><tr>
-						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
-						</td>
-						<td>
-							1
-						</td>
-						<td>
-							¥3.90
-						</td>
-						<td>
-							<span>未付款</span><br/>
-							<a href="" >订单详情</a>
-						</td>
-						<td>
-							<a class='btn' href="">付款</a><br/>
-							<a href="">删除订单</a>
-						</td>
-					</tr>
+				<?php }?><?php endif;?>
+
 				</tbody>
-			</table>	
+			</table>
+				<?php  }else{ ?>
+				没有任何订单信息!
+			<?php }?>
 		</div>
 		
 		
