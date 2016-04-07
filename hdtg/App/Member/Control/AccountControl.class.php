@@ -5,6 +5,10 @@
  */
 class AccountControl extends CommonControl{
 
+	public function __auto(){
+
+		if(isset($_SESSION[C('RBAC_AUTH_KEY')])==false) $this->error("请先登录",U("Member/Login/index"));
+	}
 	/**
 	 * 显示账户余额
 	 */

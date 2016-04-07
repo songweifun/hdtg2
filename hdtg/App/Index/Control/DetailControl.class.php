@@ -13,6 +13,8 @@
    			}
 
         public function index(){
+            $this->assign("userIsLogin",isset($_SESSION[C('RBAC_AUTH_KEY')]));
+
           p($_SESSION);
         	$data=$this->db->getGoodsDetail($this->gid);
 

@@ -75,9 +75,9 @@
 					<div class='user-nav my-hdtg '>
 						<a class='title' href="">我的团购</a>
 						<ul class="menu">
-							<li><a href="">我的订单</a></li>	
+							<li><a href="<?php echo U('Member/Order/index');?>">我的订单</a></li>
 							<li><a href="">我的评价</a></li>
-							<li><a href="">我的收藏</a></li>
+							<li><a href="<?php echo U('Member/Index/collect');?>">我的收藏</a></li>
 							<li><a href="">我的成长</a></li>
 							<li><a href="">账户余额</a></li>
 							<li><a href="">账户充值</a></li>
@@ -172,7 +172,7 @@
 					</div>
 				</div>
 				<div class='collect'>
-					<a class='collect-link' href=''><i></i>收藏本单</a>
+					<a class='collect-link' url="<?php echo U('Member/Index/addCollect');?>/gid/<?php echo $data['gid'];?>" urlto="<?php echo U('Member/Index/collect');?>" id="collectId" href='javascript:void(0);'><i></i>收藏本单</a>
 					
 					<div class='share'>
 						

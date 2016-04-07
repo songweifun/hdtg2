@@ -3,18 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="4b72af51-aec7-4679-925a-24a98879a97e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/js/common.js" afterPath="$PROJECT_DIR$/Public/js/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/tpl/header.html" afterPath="$PROJECT_DIR$/Public/tpl/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/BuyControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/BuyControl.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html" afterPath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js" afterPath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/OrderControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/OrderControl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Model/OrderModel.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Model/OrderModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Buy/buysuccess.html" afterPath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Buy/buysuccess.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Cart/index.html" afterPath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Cart/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Order/index.html" afterPath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Order/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Common/userhome-hd.html" afterPath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Common/userhome-hd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html" afterPath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/25dc4b9785d98b3bf0659a9548857598.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/25dc4b9785d98b3bf0659a9548857598.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/389dd666a0539bacaabad263ed328793.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/389dd666a0539bacaabad263ed328793.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/49fd2a97118468c85014ccf40efcaf12.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/49fd2a97118468c85014ccf40efcaf12.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/1c80ee5751998cd4750b855fdee2c74f.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/1c80ee5751998cd4750b855fdee2c74f.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/35172a06ff10a0c37b6d82b403840790.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/35172a06ff10a0c37b6d82b403840790.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/3dbfea0b6cd81054d5137c71e96cf638.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/3dbfea0b6cd81054d5137c71e96cf638.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/49fd2a97118468c85014ccf40efcaf12.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/49fd2a97118468c85014ccf40efcaf12.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/6c3b8dfcb9cbfe57802cd0c89e81ed91.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/6c3b8dfcb9cbfe57802cd0c89e81ed91.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/72e543446960562609543179ef3019ea.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/72e543446960562609543179ef3019ea.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/d931adb3c642771bf84355a94b9f749b.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/d931adb3c642771bf84355a94b9f749b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/defe96cec9957a38aaf0c9824bc78ef6.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/defe96cec9957a38aaf0c9824bc78ef6.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/e4a26d195b0ce76af56bfc920a4ae47c.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/e4a26d195b0ce76af56bfc920a4ae47c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/fb281c2e5587461aa0c95a10d5f9f710.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/fb281c2e5587461aa0c95a10d5f9f710.php" />
     </list>
     <ignored path="hdtg2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,30 +48,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/js/common.js">
+      <file leaf-file-name="collect.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartControl.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.548387">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountControl.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30091184">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/tpl/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.096774">
+              <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexControl.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.129032">
+              <caret line="60" column="66" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="228" column="31" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="31" />
               <folding>
-                <marker date="1459938895000" expanded="true" signature="1562:1932" placeholder="..." />
-                <marker date="1459938895000" expanded="true" signature="1631:1689" placeholder="..." />
-                <marker date="1459938895000" expanded="true" signature="1702:1919" placeholder="..." />
-                <marker date="1459938895000" expanded="true" signature="1714:1811" placeholder="..." />
-                <marker date="1459938895000" expanded="true" signature="4138:4519" placeholder="..." />
-                <marker date="1459938895000" expanded="true" signature="4173:4235" placeholder="..." />
-                <marker date="1459938895000" expanded="true" signature="4271:4504" placeholder="..." />
-                <marker date="1459938895000" expanded="true" signature="4286:4351" placeholder="..." />
+                <marker date="1460006622000" expanded="true" signature="6022:6154" placeholder="..." />
+                <marker date="1460006622000" expanded="true" signature="6069:6145" placeholder="..." />
+                <marker date="1460006622000" expanded="true" signature="6177:6289" placeholder="..." />
+                <marker date="1460006622000" expanded="true" signature="6405:6491" placeholder="..." />
+                <marker date="1460006622000" expanded="true" signature="6452:6482" placeholder="..." />
+                <marker date="1460006622000" expanded="true" signature="6514:6630" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Public/tpl/header.html">
+      <file leaf-file-name="DetailControl.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28402367">
-              <caret line="103" column="59" selection-start-line="103" selection-start-column="59" selection-end-line="103" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonControl.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.7931035">
+              <caret line="10" column="46" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="92" selection-start-line="77" selection-start-column="89" selection-end-line="77" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -83,8 +173,6 @@
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Public/js/goodnum.js" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Public/css/cart.css" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Buy/payment.html" />
-        <option value="$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php" />
-        <option value="$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Cart/index.html" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Buy/buysuccess.html" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Control/OrderControl.class.php" />
@@ -92,7 +180,17 @@
         <option value="$PROJECT_DIR$/hdtg/App/Member/Control/BuyControl.class.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Order/index.html" />
         <option value="$PROJECT_DIR$/Public/js/common.js" />
+        <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Common/userhome-hd.html" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php" />
+        <option value="$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php" />
+        <option value="$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php" />
+        <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html" />
+        <option value="$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php" />
         <option value="$PROJECT_DIR$/Public/tpl/header.html" />
+        <option value="$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php" />
+        <option value="$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php" />
       </list>
     </option>
   </component>
@@ -108,7 +206,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1600" />
-    <option name="height" value="804" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -135,8 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -391,6 +487,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Member" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Cart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -524,6 +650,70 @@
               <option name="myItemId" value="Tpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -594,9 +784,37 @@
               <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Control" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -660,7 +878,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1600" height="804" extended-state="0" />
+    <frame x="0" y="23" width="1600" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -698,21 +916,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hdphp/Lib/Driver/Db/DbMysqli.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="162" column="39" selection-start-line="162" selection-start-column="39" selection-end-line="162" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/RegControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hdphp/Extend/Tool/Code.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -868,13 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.064705886">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Public/js/userhome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -907,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,30 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4556213">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="24" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <marker date="1459709747000" expanded="true" signature="5897:6029" placeholder="..." />
-            <marker date="1459709747000" expanded="true" signature="5944:6020" placeholder="..." />
-            <marker date="1459709747000" expanded="true" signature="6052:6164" placeholder="..." />
-            <marker date="1459709747000" expanded="true" signature="6280:6366" placeholder="..." />
-            <marker date="1459709747000" expanded="true" signature="6327:6357" placeholder="..." />
-            <marker date="1459709747000" expanded="true" signature="6389:6505" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,7 +1117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.13017751">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,7 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,15 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30508474">
           <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.92011833">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,23 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39053255">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.03254438">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.84615386">
           <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,15 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1715976">
           <caret line="99" column="23" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35798818">
-          <caret line="11" column="63" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,15 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06508876">
           <caret line="2" column="71" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Model/OrderModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9322034">
-          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42372882">
           <caret line="200" column="49" selection-start-line="200" selection-start-column="49" selection-end-line="200" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,23 +1173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.779661">
           <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/OrderControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44674557">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31360948">
-          <caret line="147" column="52" selection-start-line="147" selection-start-column="8" selection-end-line="150" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,23 +1180,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Model/OrderModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.55">
+          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Common/userhome-hd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32352942">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/OrderControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52794117">
+          <caret line="30" column="34" selection-start-line="29" selection-start-column="10" selection-end-line="35" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="92" selection-start-line="77" selection-start-column="89" selection-end-line="77" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="228" column="31" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="31" />
           <folding>
-            <marker date="1459938895000" expanded="true" signature="1562:1932" placeholder="..." />
-            <marker date="1459938895000" expanded="true" signature="1631:1689" placeholder="..." />
-            <marker date="1459938895000" expanded="true" signature="1702:1919" placeholder="..." />
-            <marker date="1459938895000" expanded="true" signature="1714:1811" placeholder="..." />
-            <marker date="1459938895000" expanded="true" signature="4138:4519" placeholder="..." />
-            <marker date="1459938895000" expanded="true" signature="4173:4235" placeholder="..." />
-            <marker date="1459938895000" expanded="true" signature="4271:4504" placeholder="..." />
-            <marker date="1459938895000" expanded="true" signature="4286:4351" placeholder="..." />
+            <marker date="1460006622000" expanded="true" signature="6022:6154" placeholder="..." />
+            <marker date="1460006622000" expanded="true" signature="6069:6145" placeholder="..." />
+            <marker date="1460006622000" expanded="true" signature="6177:6289" placeholder="..." />
+            <marker date="1460006622000" expanded="true" signature="6405:6491" placeholder="..." />
+            <marker date="1460006622000" expanded="true" signature="6452:6482" placeholder="..." />
+            <marker date="1460006622000" expanded="true" signature="6514:6630" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.129032">
+          <caret line="60" column="66" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7931035">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/tpl/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28402367">
-          <caret line="103" column="59" selection-start-line="103" selection-start-column="59" selection-end-line="103" selection-end-column="59" />
+        <state vertical-scroll-proportion="-5.096774">
+          <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30091184">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
           <folding />
         </state>
       </provider>

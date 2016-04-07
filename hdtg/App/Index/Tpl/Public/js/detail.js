@@ -21,6 +21,38 @@ $(document).ready(function() {
 		
 
 	});
+
+//收藏本单发送ajax
+	$("#collectId").click(function(event) {
+		if(!userIsLogin) {alert("你没有登录");return false;}
+		var url=$(this).attr('url');
+		var urlto=$(this).attr('urlto');
+		//alert(typeof url)
+		$.ajax({
+			type:"post",
+			url: url,
+			type:"json",
+			success:function (result){
+				result=JSON.parse(result)
+				if(result.status==true){
+					showInfoWindow(collectSucc);
+					//alert(result.status)
+					//$("#total").html(result.total);
+				}else{
+					alert('此商品已经收藏了!');
+					window.location.href=urlto;
+				}
+
+
+
+			}
+		});
+
+
+	});
+
+
+
 });
 
 /**

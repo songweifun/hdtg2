@@ -75,13 +75,13 @@
 					<div class='user-nav my-hdtg '>
 						<a class='title' href="">我的团购</a>
 						<ul class="menu">
-							<li><a href="">我的订单</a></li>	
+							<li><a href="<?php echo U('Member/Order/index');?>">我的订单</a></li>
 							<li><a href="">我的评价</a></li>
-							<li><a href="">我的收藏</a></li>
-							<li><a href="">我的成长</a></li>
-							<li><a href="">账户余额</a></li>
+							<li><a href="<?php echo U('Member/Index/collect');?>">我的收藏</a></li>
+							<li><a href="<?php echo U('Member/Account/growth');?>">我的成长</a></li>
+							<li><a href="<?php echo U('Member/Account/index');?>">账户余额</a></li>
 							<li><a href="">账户充值</a></li>
-							<li><a href="">账户设置</a></li>
+							<li><a href="<?php echo U('Member/Account/setting');?>">账户设置</a></li>
 						</ul>
 					</div>
 
@@ -98,65 +98,10 @@
 				
 				
 				<!-- 最近浏览 -->	
-					<div  class='user-nav recent-view '>
+					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' detailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
 						<a class='title' href="">最近浏览</a>
 						<ul class="menu">
-							<li>
-								<a class='image' href="">
-									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
-								</a>
-								<div>
-									<h4>
-										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
-									</h4>
-									<span><strong>¥25</strong><del>36</del></span>
-								</div>					
-							</li>
-							<li>
-								<a class='image' href="">
-									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
-								</a>
-								<div>
-									<h4>
-										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
-									</h4>
-									<span><strong>¥25</strong><del>36</del></span>
-								</div>					
-							</li>
-							<li>
-								<a class='image' href="">
-									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
-								</a>
-								<div>
-									<h4>
-										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
-									</h4>
-									<span><strong>¥25</strong><del>36</del></span>
-								</div>					
-							</li>
-							<li>
-								<a class='image' href="">
-									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
-								</a>
-								<div>
-									<h4>
-										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
-									</h4>
-									<span><strong>¥25</strong><del>36</del></span>
-								</div>					
-							</li>
-							<li>
-								<a class='image' href="">
-									<img src="http://p1.meituan.net/80.50/deal/__10119572__2038276.jpg" />
-								</a>
-								<div>
-									<h4>
-										<a href="">上岛咖啡双人下午茶套餐，五道口</a>
-									</h4>
-									<span><strong>¥25</strong><del>36</del></span>
-								</div>					
-							</li>
-							<p class='clear'><a href="">清空最近浏览记录</a></p>
+							<p class="clear">最近没有浏览任何商品</p>
 						</ul>
 					</div>
 
@@ -179,10 +124,10 @@
 	<div class='left'>
 		<ul class='userhome-nav'>
 			<li class='active'>
-				<a href="">团购订单</a>
+				<a href="<?php echo U('Member/Order/index');?>">团购订单</a>
 			</li>
 			<li>
-				<a href="">我的收藏</a>
+				<a href="<?php echo U('Member/Index/collect');?>">我的收藏</a>
 			</li>
 			<li>
 				<a href="">我的评价</a>
@@ -200,11 +145,12 @@
 		<div id="content">
 		<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/index.css" type="text/css" rel="stylesheet" >
 		<div class='collect-nav'>
-			<a href="" class='active'>全部</a>
-			<a href="">进行中的团购</a>
-			<a href="">已结束</a>
+			<a href="<?php echo U('Member/Index/collect');?>" class='active'>全部</a>
+			<a href="<?php echo U('Member/Index/collect');?>/status/1">进行中的团购</a>
+			<a href="<?php echo U('Member/Index/collect');?>/status/2">已结束</a>
 		</div>
 		<div class='collect-list'>
+			<?php if($collect){?>
 			<table>
 				<thead>
 					<tr>
@@ -215,23 +161,36 @@
 					</tr>
 				</thead>
 				<tbody>
+
+				<?php if(is_array($collect)):?><?php  foreach($collect as $v){ ?>
 					<tr>
 						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+							<img src="<?php echo $v['goods_img'];?>">
+							<a href=""><?php echo $v['main_title'];?></a>
 						</td>
 						<td>
-							¥3.90
+							¥<?php echo $v['price'];?>
 						</td>
 						<td>
-							进行中
+							<?php echo $v['status'];?>
 						</td>
+						<?php if($v['status'] == '已下架'){?>
 						<td>
-							<a class='btn' href="">购买</a><a href="">删除</a>
+							<a href="<?php echo U('Member/Index/delCollect');?>/gid/<?php echo $v['gid'];?>">删除</a>
 						</td>
+							<?php  }else{ ?>
+							<td>
+								<a class='btn' href="<?php echo U('Member/Buy/index');?>/gid/<?php echo $v['gid'];?>">购买</a><a href="<?php echo U('Member/Index/delCollect');?>/gid/<?php echo $v['gid'];?>">删除</a>
+							</td>
+						<?php }?>
 					</tr>
+				<?php }?><?php endif;?>
+
 				</tbody>
-			</table>	
+			</table>
+				<?php  }else{ ?>
+				没有收藏的商品!
+			<?php }?>
 		</div>
 		
 		

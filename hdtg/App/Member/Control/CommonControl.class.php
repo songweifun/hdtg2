@@ -1,12 +1,14 @@
 <?php 
 class CommonControl extends Control{
 	protected $db;
+	public $uid;
 
 	public function __init()
 	{
 		# code...
 		if(method_exists($this, '__auto'))
 			$this->__auto();
+         $this->uid=isset($_SESSION[C('RBAC_AUTH_KEY')])?$_SESSION[C('RBAC_AUTH_KEY')]:null;
 
 		//分配是否登陆变量
 		  $this->assign("userLogin",isset($_SESSION[C('RBAC_AUTH_KEY')]));

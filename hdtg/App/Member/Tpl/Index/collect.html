@@ -1,11 +1,12 @@
 <load file="./hdtg/App/Member/Tpl/Common/userhome-hd.html" />
 		<link href="__PUBLIC__/css/index.css" type="text/css" rel="stylesheet" >
 		<div class='collect-nav'>
-			<a href="" class='active'>全部</a>
-			<a href="">进行中的团购</a>
-			<a href="">已结束</a>
+			<a href="{|U('Member/Index/collect')}" class='active'>全部</a>
+			<a href="{|U('Member/Index/collect')}/status/1">进行中的团购</a>
+			<a href="{|U('Member/Index/collect')}/status/2">已结束</a>
 		</div>
 		<div class='collect-list'>
+			<if value="$collect">
 			<table>
 				<thead>
 					<tr>
@@ -16,23 +17,36 @@
 					</tr>
 				</thead>
 				<tbody>
+
+				<foreach from="$collect" value="$v">
 					<tr>
 						<td class='goods-show'>
-							<img src="http://p1.meituan.net/75.46/deal/__14462820__8797659.jpg">
-							<a href="">天堂烧烤：双人餐，无需预约，美味享受</a>
+							<img src="{$v.goods_img}">
+							<a href="">{$v.main_title}</a>
 						</td>
 						<td>
-							¥3.90
+							¥{$v.price}
 						</td>
 						<td>
-							进行中
+							{$v.status}
 						</td>
+						<if value="{$v.status} eq '已下架'">
 						<td>
-							<a class='btn' href="">购买</a><a href="">删除</a>
+							<a href="{|U('Member/Index/delCollect')}/gid/{$v.gid}">删除</a>
 						</td>
+							<else/>
+							<td>
+								<a class='btn' href="{|U('Member/Buy/index')}/gid/{$v.gid}">购买</a><a href="{|U('Member/Index/delCollect')}/gid/{$v.gid}">删除</a>
+							</td>
+						</if>
 					</tr>
+				</foreach>
+
 				</tbody>
-			</table>	
+			</table>
+				<else/>
+				没有收藏的商品!
+			</if>
 		</div>
 		
 		

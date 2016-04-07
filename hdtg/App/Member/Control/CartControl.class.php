@@ -3,7 +3,7 @@ class CartControl extends CommonControl{
 	/**
 	 * 显示购物车页
 	 */	
-	private $uid=null;
+	//private $uid=null;
 	//p判断用户是否登陆了
 	public function __auto(){
 		if(isset($_SESSION[C('RBAC_AUTH_KEY')])){
@@ -27,6 +27,9 @@ class CartControl extends CommonControl{
 			//清除seesion
 			unset($_SESSION['cart']);
 		}
+		}else{
+
+			$this->error("请先登录!",U('Member/Login/index'));
 		}
 	}
 

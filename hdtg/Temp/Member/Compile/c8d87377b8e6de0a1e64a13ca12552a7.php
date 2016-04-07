@@ -1,4 +1,4 @@
-<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>	<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -78,10 +78,10 @@
 							<li><a href="<?php echo U('Member/Order/index');?>">我的订单</a></li>
 							<li><a href="">我的评价</a></li>
 							<li><a href="<?php echo U('Member/Index/collect');?>">我的收藏</a></li>
-							<li><a href="">我的成长</a></li>
-							<li><a href="">账户余额</a></li>
+							<li><a href="<?php echo U('Member/Account/growth');?>">我的成长</a></li>
+							<li><a href="<?php echo U('Member/Account/index');?>">账户余额</a></li>
 							<li><a href="">账户充值</a></li>
-							<li><a href="">账户设置</a></li>
+							<li><a href="<?php echo U('Member/Account/setting');?>">账户设置</a></li>
 						</ul>
 					</div>
 
@@ -117,88 +117,84 @@
 		</div>
 	</div> 
 	<!-- 导航结束 -->
-	
 	<!-- 载入公共头部文件-->
-	<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/buy.css" type="text/css" rel="stylesheet" >
-	<script src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/goodnum.js"></script>
-	<div class='position'>
-		<div id="main">
-		<form action="<?php echo U('Member/Buy/payment');?>/gid/<?php echo $data['gid'];?>" method="post" >
-		<input type="hidden" name="gid" value="<?php echo $data['gid'];?>">
-		<input type="hidden" name="price" value="<?php echo $data['price'];?>">
-			<div class='step'>
+<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/userhome.css" type="text/css" rel="stylesheet" >
+<script type="text/javascript" src="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/js/userhome.js"></script>	
+<div id="main">
+	<div class='left'>
+		<ul class='userhome-nav'>
+			<li class='active'>
+				<a href="<?php echo U('Member/Order/index');?>">团购订单</a>
+			</li>
+			<li>
+				<a href="<?php echo U('Member/Index/collect');?>">我的收藏</a>
+			</li>
+			<li>
+				<a href="">我的评价</a>
+			</li>
+			<li>
+				<a href="">我的成长</a>
+			</li>
+			<li>
+				<a href="">美团余额</a>
+			</li>
+			<li>
+				<a href="">账户设置</a>
+			</li>
+		</ul>
+		<div id="content">
+		<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/account.css" type="text/css" rel="stylesheet" >
+		<div class='growth-nav'>
+			我的成长信息
+		</div>
+		<div id="growth">
+			<div class='growth-hd'>
+				<p>我当前的等级是：<i></i></p>
+				<p>我目前的成长值是:<strong>0</strong></p>
+			</div>
+			<div class='rate-bar'>
+				<span class='growth-rate-bg'>
+					<span></span>
+				</span>
 				<ul>
-					<li class='current'>1.查看购物车 </li>
-					<li>2.选择支付方式 </li>
-					<li>3.购买成功 </li>
-				</ul>	
-			</div>
-			<!-- 购物车列表 -->
-			<table class='buy-table' border=0>
-			<thead>
-				<tr>
-					<th>项目</th>
-					<th width='20%' style="text-align:left;">数量</th>
-					<th width='20%'>单价</th>
-					<th width='10%'>总价</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<a href=""><?php echo $data['main_title'];?></a>
-					</td>
-					<td class='goods-num'>
-						<a href="javascript:void(0);" class='reduce' id="reduce"></a>
-						<input id="num" name="goods_num" class="num" type="text" value=1>
-						<a href="javascript:void(0);" class='add' id="add"></a>
-					</td>
-					<td class="price"><?php echo $data['price'];?></td>
-					<td class="totals"><?php echo $data['price'];?></td>
-				</tr>
-			</tbody>
-			</table>
-			<!-- 收货地址列表 -->
-			<div class='address-list'>
-			<table>
-				<thead>
-					<tr>
-						<th>选择</th>
-						<th width="20%">收货人</th>
-						<th>地址/邮编</th>
-						<th width="20%">电话/手机</th>
-						<th width="20%">操作</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php if(is_array($address)):?><?php  foreach($address as $v){ ?>
-					<tr>
-						<td>
-							<input type="radio" checked=true name="addressid" value="<?php echo $v['addressid'];?>">
-						</td>
-						<td>
-							<?php echo $v['consignee'];?>
-						</td>
-						<td>
-						<?php echo $v['province'];?>-<?php echo $v['city'];?>-<?php echo $v['county'];?>-<?php echo $v['street'];?>
-						</td>
-						<td>
-							<?php echo $v['tel'];?>
-						</td>
-						<td>
-							<a href="<?php echo U('Member/Account/delAddress');?>/addressid/<?php echo $v['addressid'];?>">删除</a>
-						</td>
-					</tr>
-					<?php }?><?php endif;?>
-				</tbody>
-			</table>	
-			</div>
-			<!-- 订单提交 -->
-			<div class='bottom'>
-				<input type="submit" class='submit' value="提交订单">
+					<li class='first'>
+						<i style="background-position:0px 0px;"></i><br/>
+						<span>0</span>
+					</li>
+					<li>
+						<i style="background-position:0px -25px;"></i><br/>
+						<span>0</span>
+					</li>
+					<li>
+						<i style="background-position:0px -50px;"></i><br/>
+						<span>0</span>
+					</li>
+					<li>
+						<i style="background-position:0px -75px;"></i><br/>
+						<span>0</span>
+					</li>
+					<li>
+						<i style="background-position:0px -100px;"></i><br/>
+						<span>0</span>
+					</li>
+					<li>
+						<i style="background-position:0px -125px;"></i><br/>
+						<span>0</span>
+					</li>
+					<li class='last'>
+						<i style="background-position:0px -150px;float:right;"></i>
+						<span style="float:right; text-align:right;">0</span>
+					</li>
+				</ul>
 			</div>
 		</div>
-		</form>
-	</div>	
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>			</div>
+		</div>
+		<div class='user-status'>
+			<h6><span>Hi~</span>_qqcd71349674843</h6>
+			<p><span>等级：<span><i></i></p>
+			<p><span>积分：<span><strong>0</strong></p>
+		</div>
+	</div>
 </body>
 </html>
