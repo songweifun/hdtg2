@@ -3,30 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4b72af51-aec7-4679-925a-24a98879a97e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/tpl/filter.html" afterPath="$PROJECT_DIR$/Public/tpl/filter.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/tpl/header.html" afterPath="$PROJECT_DIR$/Public/tpl/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Control/IndexControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Index/Control/IndexControl.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Model/GoodsModel.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Index/Model/GoodsModel.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html" afterPath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js" afterPath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Common/userhome-hd.html" afterPath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Common/userhome-hd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html" afterPath="$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Index/index.html" afterPath="$PROJECT_DIR$/hdtg/App/Index/Tpl/Index/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/25dc4b9785d98b3bf0659a9548857598.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/25dc4b9785d98b3bf0659a9548857598.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/389dd666a0539bacaabad263ed328793.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/389dd666a0539bacaabad263ed328793.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/49fd2a97118468c85014ccf40efcaf12.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/49fd2a97118468c85014ccf40efcaf12.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/1c80ee5751998cd4750b855fdee2c74f.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/1c80ee5751998cd4750b855fdee2c74f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/35172a06ff10a0c37b6d82b403840790.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/35172a06ff10a0c37b6d82b403840790.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/3dbfea0b6cd81054d5137c71e96cf638.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/3dbfea0b6cd81054d5137c71e96cf638.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/49fd2a97118468c85014ccf40efcaf12.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/49fd2a97118468c85014ccf40efcaf12.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/6c3b8dfcb9cbfe57802cd0c89e81ed91.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/6c3b8dfcb9cbfe57802cd0c89e81ed91.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/72e543446960562609543179ef3019ea.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/72e543446960562609543179ef3019ea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/d931adb3c642771bf84355a94b9f749b.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/d931adb3c642771bf84355a94b9f749b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/defe96cec9957a38aaf0c9824bc78ef6.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/defe96cec9957a38aaf0c9824bc78ef6.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/e4a26d195b0ce76af56bfc920a4ae47c.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/e4a26d195b0ce76af56bfc920a4ae47c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/fb281c2e5587461aa0c95a10d5f9f710.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Member/Compile/fb281c2e5587461aa0c95a10d5f9f710.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/9b6a77813ce1af13beecf5bc48e5518c.php" afterPath="$PROJECT_DIR$/hdtg/Temp/Index/Compile/9b6a77813ce1af13beecf5bc48e5518c.php" />
     </list>
     <ignored path="hdtg2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,109 +35,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="collect.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartControl.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.548387">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountControl.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30091184">
-              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/tpl/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.096774">
-              <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexControl.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.129032">
-              <caret line="60" column="66" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="228" column="31" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="31" />
+            <state vertical-scroll-proportion="4.5007153">
+              <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
               <folding>
-                <marker date="1460006622000" expanded="true" signature="6022:6154" placeholder="..." />
-                <marker date="1460006622000" expanded="true" signature="6069:6145" placeholder="..." />
-                <marker date="1460006622000" expanded="true" signature="6177:6289" placeholder="..." />
-                <marker date="1460006622000" expanded="true" signature="6405:6491" placeholder="..." />
-                <marker date="1460006622000" expanded="true" signature="6452:6482" placeholder="..." />
-                <marker date="1460006622000" expanded="true" signature="6514:6630" placeholder="..." />
+                <marker date="1460125889000" expanded="true" signature="6089:6221" placeholder="..." />
+                <marker date="1460125889000" expanded="true" signature="6136:6212" placeholder="..." />
+                <marker date="1460125889000" expanded="true" signature="6244:6356" placeholder="..." />
+                <marker date="1460125889000" expanded="true" signature="6472:6558" placeholder="..." />
+                <marker date="1460125889000" expanded="true" signature="6519:6549" placeholder="..." />
+                <marker date="1460125889000" expanded="true" signature="6581:6697" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DetailControl.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonControl.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7931035">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="92" selection-start-line="77" selection-start-column="89" selection-end-line="77" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -166,7 +63,6 @@
         <option value="$PROJECT_DIR$/hdphp/Lib/Function/Functions.php" />
         <option value="$PROJECT_DIR$/hdphp/Lib/Driver/Db/DbMysqli.class.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Control/RegControl.class.php" />
-        <option value="$PROJECT_DIR$/hdtg/App/Index/Control/IndexControl.class.php" />
         <option value="$PROJECT_DIR$/hdphp/Config/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Buy/index.html" />
@@ -181,16 +77,20 @@
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Order/index.html" />
         <option value="$PROJECT_DIR$/Public/js/common.js" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Common/userhome-hd.html" />
-        <option value="$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html" />
         <option value="$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/js/detail.js" />
-        <option value="$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Model/UserModel.class.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php" />
-        <option value="$PROJECT_DIR$/Public/tpl/header.html" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php" />
         <option value="$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php" />
+        <option value="$PROJECT_DIR$/Public/tpl/header.html" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Tpl/Index/index.html" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Control/IndexControl.class.php" />
+        <option value="$PROJECT_DIR$/Public/tpl/filter.html" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Model/GoodsModel.class.php" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php" />
+        <option value="$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html" />
       </list>
     </option>
   </component>
@@ -206,7 +106,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1600" />
-    <option name="height" value="813" />
+    <option name="height" value="827" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -282,24 +182,6 @@
               <option name="myItemId" value="Public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -397,7 +279,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Order" />
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -420,160 +306,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Buy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,28 +353,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdtg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -685,7 +395,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -712,6 +422,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -766,6 +480,10 @@
               <option name="myItemId" value="Index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -810,6 +528,28 @@
               <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hdtg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -823,8 +563,11 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.CategoryControl.class.php">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="CategoryControl.class.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hdtg2/hdtg/App/Admin/Control/CategoryControl.class.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hdtg2/hdtg/App/Index/Tpl/Index/index.html">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -855,12 +598,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.CategoryControl.class.php" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.CategoryControl.class.php" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.CategoryControl.class.php" />
       </list>
     </recent_temporary>
   </component>
@@ -878,10 +623,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1600" height="813" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1600" height="827" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292517" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -893,11 +638,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39891452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39784947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -916,48 +661,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hdphp/Extend/Tool/Code.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Reg/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Public/js/check.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/Common/Config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdphp/Config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdphp/Lib/Driver/Db/DbMysqli.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hdtg/Common/Config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1036,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/IndexControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Reg/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1054,13 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdphp/Config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1187,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52794117">
           <caret line="30" column="34" selection-start-line="29" selection-start-column="10" selection-end-line="35" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,78 +904,138 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="77" column="92" selection-start-line="77" selection-start-column="89" selection-end-line="77" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="228" column="31" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="31" />
-          <folding>
-            <marker date="1460006622000" expanded="true" signature="6022:6154" placeholder="..." />
-            <marker date="1460006622000" expanded="true" signature="6069:6145" placeholder="..." />
-            <marker date="1460006622000" expanded="true" signature="6177:6289" placeholder="..." />
-            <marker date="1460006622000" expanded="true" signature="6405:6491" placeholder="..." />
-            <marker date="1460006622000" expanded="true" signature="6452:6482" placeholder="..." />
-            <marker date="1460006622000" expanded="true" signature="6514:6630" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Tpl/Index/collect.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-24.129032">
           <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php">
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.548387">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state vertical-scroll-proportion="-3.413793">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Model/CategoryModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.03211679">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/IndexControl.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.129032">
-          <caret line="60" column="66" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.6145985">
+          <caret line="132" column="19" selection-start-line="130" selection-start-column="8" selection-end-line="135" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Model/CategoryModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4540146">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/tpl/filter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.275862">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CommonControl.class.php">
+    <entry file="file://$PROJECT_DIR$/hdphp/Config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7931035">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="55" />
+        <state vertical-scroll-proportion="1.2979351">
+          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3303835">
+          <caret line="41" column="72" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/IndexControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6282642">
+          <caret line="466" column="46" selection-start-line="466" selection-start-column="46" selection-end-line="466" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/tpl/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.096774">
-          <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
+        <state vertical-scroll-proportion="1.2330383">
+          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/AccountControl.class.php">
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Model/GoodsModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30091184">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        <state vertical-scroll-proportion="-6.293103">
+          <caret line="146" column="79" selection-start-line="146" selection-start-column="79" selection-end-line="146" selection-end-column="79" />
+          <folding>
+            <marker date="1460125371000" expanded="true" signature="3481:3654" placeholder="select group..group_goods..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Public/css/detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7413793">
+          <caret line="134" column="46" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Member/Control/CartControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2920354">
+          <caret line="151" column="47" selection-start-line="151" selection-start-column="8" selection-end-line="153" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Control/DetailControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6106195">
+          <caret line="84" column="108" selection-start-line="84" selection-start-column="108" selection-end-line="84" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdtg/App/Index/Tpl/Detail/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.5007153">
+          <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
+          <folding>
+            <marker date="1460125889000" expanded="true" signature="6089:6221" placeholder="..." />
+            <marker date="1460125889000" expanded="true" signature="6136:6212" placeholder="..." />
+            <marker date="1460125889000" expanded="true" signature="6244:6356" placeholder="..." />
+            <marker date="1460125889000" expanded="true" signature="6472:6558" placeholder="..." />
+            <marker date="1460125889000" expanded="true" signature="6519:6549" placeholder="..." />
+            <marker date="1460125889000" expanded="true" signature="6581:6697" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

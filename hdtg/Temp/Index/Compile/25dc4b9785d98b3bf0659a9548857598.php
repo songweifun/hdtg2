@@ -33,14 +33,16 @@
 			</div>
 			<div class='search'>
 				<div class='item'>
-					<a href="">小时代</a>
-					<a href="">KTV</a>
-					<a href="">电影</a>
-					<a href="">全聚德</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/小时代">小时代</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/KTV">KTV</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/电影">电影</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/全聚德">全聚德</a>
 				</div>
 				<div class='search-bar'>
+					<form action="<?php echo U('Index/Index/index');?>" method="get">
 					<input class='s-text' type="text" name="keywords" value="请输入商品名称，地址等">
 					<input class='s-submit' type="submit" value='搜索'>
+					</form>
 				</div>
 			</div>
 			<div class='commitment'>
@@ -78,10 +80,10 @@
 							<li><a href="<?php echo U('Member/Order/index');?>">我的订单</a></li>
 							<li><a href="">我的评价</a></li>
 							<li><a href="<?php echo U('Member/Index/collect');?>">我的收藏</a></li>
-							<li><a href="">我的成长</a></li>
-							<li><a href="">账户余额</a></li>
+							<li><a href="<?php echo U('Member/Account/growth');?>">我的成长</a></li>
+							<li><a href="<?php echo U('Member/Account/index');?>">账户余额</a></li>
 							<li><a href="">账户充值</a></li>
-							<li><a href="">账户设置</a></li>
+							<li><a href="<?php echo U('Member/Account/setting');?>">账户设置</a></li>
 						</ul>
 					</div>
 
@@ -247,22 +249,24 @@
 				<h3 class='recommend-title'>
 					看过本团购的用户还看了
 				</h3>
+				<?php if(is_array($sameGoods)):?><?php  foreach($sameGoods as $v){ ?>
 				<div class='recommend-goods'>
-					<a class='goods-image' href="">
-						<img alt="图像加载失败.." src="http://p0.meituan.net/200.121/deal/__5738304__3391447.jpg">
+					<a class='goods-image' href="<?php echo U('Index/Detail/index');?>/gid/<?php echo $v['gid'];?>">
+						<img alt="图像加载失败.." src="<?php echo $v['goods_img'];?>">
 					</a>
 					<h4>
-						<a href="">【五道口】上岛咖啡：双人下午茶套餐，美味齐分享</a>
+						<a href=""><?php echo $v['main_title'];?></a>
 					</h4>
 					<p>
-						<strong>¥39.8</strong>
-						<span class='cost-price'>门店价<del>144</del></span>
+						<strong>¥<?php echo $v['price'];?></strong>
+						<span class='cost-price'>门店价<del><?php echo $v['old_price'];?></del></span>
 						<span class='num'>
-							<span>173</span>
-							 人已团购
+							<span><?php echo $v['buy'];?></span>
+							 人已购
 						</span>
 					</p>
 				</div>
+				<?php }?><?php endif;?>
 			</div>
 		</div>
 		

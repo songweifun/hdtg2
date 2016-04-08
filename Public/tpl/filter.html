@@ -2,8 +2,10 @@
 	<div id="filter">
 		<div class='hots'>
 			<span>热门团购：</span>
-			<div class='box'>	
-				<a href="">电影</a><a href="经济型酒店">经济型酒店</a><a href="自助餐">自助餐</a><a href="KTV">KTV</a><a href="火锅">火锅</a><a href="烧烤烤肉">烧烤烤肉</a><a href="本地/周边游">本地/周边游</a>
+			<div class='box'>
+				<foreach from="$hotgroups" value="$v">
+				<a href="{|U('Index/Index/index')}/cid/{$v.cid}">{$v.cname}</a>
+				</foreach>
 			</div>	
 		</div>
 		

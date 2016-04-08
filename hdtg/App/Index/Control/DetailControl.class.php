@@ -21,6 +21,9 @@
           $data=$this->setDetailData($data);
           //p($data['goods_server']);exit;
         	$this->assign('data',$data);
+
+            //获得还浏览了什么商品
+            $this->sameGoods();
         	$this->display();            
         }
     
@@ -56,7 +59,9 @@
         }
 
 
-
+       /**
+        * 设置最近浏览
+        */
         public function setRecentView(){
           $key=encrypt('recent-view');
           $value=isset($_COOKIE[$key])?unserialize(decrypt($_COOKIE[$key])):array();
@@ -68,5 +73,22 @@
          //p($value);
 
         }
+
+       /**
+        * 获得看了的相似商品
+        */
+       public function sameGoods(){
+
+           $data=$this->db->getGoodCid($this->gid);
+           foreach($data as $k=>$v){
+               $pathInfo=pathinfo($v['goods_img']);
+               $data[$k]['goods_img']=__ROOT__.'/'. $pathInfo['dirname'].'/'.$pathInfo['filename']."_200x100.".$pathInfo['extension'];
+           }
+           $this->assign('sameGoods',$data);
+
+
+
+
+       }
    }
 ?>

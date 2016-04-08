@@ -2,8 +2,10 @@
 	<div id="filter">
 		<div class='hots'>
 			<span>热门团购：</span>
-			<div class='box'>	
-				<a href="">电影</a><a href="经济型酒店">经济型酒店</a><a href="自助餐">自助餐</a><a href="KTV">KTV</a><a href="火锅">火锅</a><a href="烧烤烤肉">烧烤烤肉</a><a href="本地/周边游">本地/周边游</a>
+			<div class='box'>
+				<?php if(is_array($hotgroups)):?><?php  foreach($hotgroups as $v){ ?>
+				<a href="<?php echo U('Index/Index/index');?>/cid/<?php echo $v['cid'];?>"><?php echo $v['cname'];?></a>
+				<?php }?><?php endif;?>
 			</div>	
 		</div>
 		

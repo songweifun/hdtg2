@@ -5,6 +5,7 @@ class GoodsModel extends viewModel{
 	public $lids=array();
 	public $strprice="";
 	public $strorder="";
+	public $keywords=null;
 	//定义关联
 
 	public $view = array(
@@ -31,8 +32,13 @@ class GoodsModel extends viewModel{
 
 	public function getGoodsTotal()
 	{
-		$where=rtrim("end_time>".time()." and ".$this->strprice," and");
-		//p($where);
+		if(!$this->keywords) {
+			$where = rtrim("end_time>" . time() . " and " . $this->strprice, " and");
+			//p($where);
+		}else{
+
+			$where='sub_title like "%'.$this->keywords.'%"';
+		}
 
 
 		# code...
@@ -62,8 +68,14 @@ class GoodsModel extends viewModel{
 	 */
 public function getGoodsAll($limit)
 	{
-		$where=rtrim("end_time>".time()." and ".$this->strprice," and");
-		p($where);
+		if(!$this->keywords) {
+			$where = rtrim("end_time>" . time() . " and " . $this->strprice, " and");
+			//p($where);
+		}else{
+
+			$where='sub_title like "%'.$this->keywords.'%"';
+		}
+		p($where);//exit;
 		p($this->strorder);
 
 		# code...
@@ -96,6 +108,44 @@ public function getGoodsDetail($gid)
 	return $this->where(array('gid'=>$gid))->find();
 }
 
+
+	/**
+	 * 获得热卖商品
+	 */
+	public function getHotGoods(){
+	$field=array(
+		"main_title",
+		"goods_img",
+		"price",
+		"buy",
+		"gid"
+	);
+		return $this->field($field)->order('buy desc')->limit(5)->select();
+	}
+
+	/**
+	 * 获得热门团购
+	 */
+	public function getHotGroups(){
+
+
+		//$this->view=array();
+		$fields = array('goods.cid','cname','count(gid)');
+		return $this->field($fields)->group('goods.cid')->order('count(gid) desc')->limit(8)->select();
+		//$field='select group_goods.cid,cname,count(cname) as number from group_goods inner join group_category on group_goods.cid=group_category.cid group by group_goods.cid order by number;';
+		//return $this->runSql($field);
+
+
+	}
+
+
+
+	public function getGoodCid($gid)
+{
+	$result=$this->field('goods.cid')->where(array("gid"=>$gid))->find();
+	$cid= $result['cid'];
+	return $this->field('gid','main_title','price','old_price','buy','goods_img')->where($result)->limit(5)->select();
+}
 }
 
 

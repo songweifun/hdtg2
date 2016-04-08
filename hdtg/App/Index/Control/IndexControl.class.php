@@ -21,7 +21,12 @@ class IndexControl extends CommonControl{
 						if(strlen(U('Index/Index/index'))>strlen(__URL__)){
 							$this->url=U('Index/Index/index');
 						}else{
-							$this->url=__URL__;
+
+							//$this->url= preg_replace('/\?keywords=/i','/keywords/',__URL__);
+							$this->url=$this->unsetParam('keywords',__URL__);
+							$this->url=url_param_remove('keywords',$this->url);
+
+
 						}
 
 						//$this->db=K('Goods');
@@ -29,9 +34,27 @@ class IndexControl extends CommonControl{
 						// p($data);
 
 		}
-
+//网上搜索的自定义去除参数函数
+	/**
+	 * remove param from url
+	 * ?param =    NULL
+	 * ?param =&   &
+	 * &param =    NULL
+	 * &param =&   &
+	 * =param =    NULL
+	 * =param =&   &
+	 * @return string
+	 */
+	function unsetParam($param, $url) {
+		return preg_replace(
+				array("/{$param}=[^&]*/i", '/[&]+/', '/\?[&]+/', '/[?&]+$/',),
+				array(''               , '&'     , '?'       , ''        ,),
+				$url
+		);
+	}
 
     function index(){
+		//p($_GET['keywords']);
 		echo session_save_path();
 			echo 111111111111;
 			$this->setCategory();
@@ -39,10 +62,16 @@ class IndexControl extends CommonControl{
 			$this->setPrice();
       $this->setOrder();
       $this->db=K('Goods');
-      $this->setCategoryWhere($this->cid);
-      $this->setLocalityWhere($this->lid);
-      $this->setPriceWhere($this->price);
-      $this->setOrderWhere($this->order);
+		if(!isset($_GET['keywords'])) {
+			$this->setCategoryWhere($this->cid);
+			$this->setLocalityWhere($this->lid);
+			$this->setPriceWhere($this->price);
+
+		}else{
+
+			$this->db->keywords=$_GET['keywords'];
+		}
+		$this->setOrderWhere($this->order);
       $total=$this->db->getGoodsTotal();
       $page=new page($total,10);// 传入总记录数，用于计算出分页数
 
@@ -51,6 +80,8 @@ class IndexControl extends CommonControl{
       $data=$this->setAssignData($data);
       $this->assign('data',$data);
       //p($data);
+		$this->getHotGoods();//热门商品
+		$this->getHotGroups();//热门团购
 
 			$this->display();
     }
@@ -405,5 +436,38 @@ public function setOrderWhere($order)
   $this->db->strorder=$order;
 
 }
+
+
+	/**
+	 * 获得热卖商品
+	 */
+
+	public function getHotGoods(){
+		$hotgoods=$this->db->getHotGoods();
+		$data=array();
+		foreach ($hotgoods as $key => $value) {
+			# code...
+			$data[$key+1]=$value;
+			$pathInfo=pathinfo($value['goods_img']);
+			$data[$key+1]['goods_img']=__ROOT__.'/'. $pathInfo['dirname'].'/'.$pathInfo['filename']."_200x100.".$pathInfo['extension'];
+		}
+
+		$this->assign("hotgoods",$data);
+	}
+
+
+	/**
+	 * 获得热门团购
+	 */
+
+	public function getHotGroups()
+	{
+		$this->db=K('Goods');
+		$hotgroups=$this->db->getHotGroups();
+		$this->assign("hotgroups",$hotgroups);
+
+	}
+
+
 }
 ?>

@@ -33,14 +33,16 @@
 			</div>
 			<div class='search'>
 				<div class='item'>
-					<a href="">小时代</a>
-					<a href="">KTV</a>
-					<a href="">电影</a>
-					<a href="">全聚德</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/小时代">小时代</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/KTV">KTV</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/电影">电影</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/全聚德">全聚德</a>
 				</div>
 				<div class='search-bar'>
+					<form action="<?php echo U('Index/Index/index');?>" method="get">
 					<input class='s-text' type="text" name="keywords" value="请输入商品名称，地址等">
 					<input class='s-submit' type="submit" value='搜索'>
+					</form>
 				</div>
 			</div>
 			<div class='commitment'>
@@ -124,8 +126,10 @@
 	<div id="filter">
 		<div class='hots'>
 			<span>热门团购：</span>
-			<div class='box'>	
-				<a href="">电影</a><a href="经济型酒店">经济型酒店</a><a href="自助餐">自助餐</a><a href="KTV">KTV</a><a href="火锅">火锅</a><a href="烧烤烤肉">烧烤烤肉</a><a href="本地/周边游">本地/周边游</a>
+			<div class='box'>
+				<?php if(is_array($hotgroups)):?><?php  foreach($hotgroups as $v){ ?>
+				<a href="<?php echo U('Index/Index/index');?>/cid/<?php echo $v['cid'];?>"><?php echo $v['cname'];?></a>
+				<?php }?><?php endif;?>
 			</div>	
 		</div>
 		
@@ -220,47 +224,19 @@
 		<div class='sidebar'>
 			<div class='hot-products'>
 				<h3>热卖商品</h3>
+
 				<ul>
+				<?php if(is_array($hotgoods)):?><?php  foreach($hotgoods as $key=>$v){ ?>
 					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
+						<h6><span><?php echo $key;?></span><a href="<?php echo U('Index/Detail/index');?>/gid/<?php echo $v['gid'];?>">【2店通用】CGV星星国际影城电影</a></h6>
+						<a href="<?php echo U('Index/Detail/index');?>/gid/<?php echo $v['gid'];?>"><img src="<?php echo $v['goods_img'];?>"/></a>
 						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
+							<em>¥<?php echo $v['price'];?></em>
+							<p>每天<span><?php echo $v['buy'];?></span>人团购</p>
 						</div>
 					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
+				<?php }?><?php endif;?>
+
 				</ul>
 			</div>
 		</div>

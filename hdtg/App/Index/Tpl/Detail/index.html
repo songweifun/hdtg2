@@ -128,22 +128,24 @@
 				<h3 class='recommend-title'>
 					看过本团购的用户还看了
 				</h3>
+				<foreach value="$v" from="$sameGoods">
 				<div class='recommend-goods'>
-					<a class='goods-image' href="">
-						<img alt="图像加载失败.." src="http://p0.meituan.net/200.121/deal/__5738304__3391447.jpg">
+					<a class='goods-image' href="{|U('Index/Detail/index')}/gid/{$v.gid}">
+						<img alt="图像加载失败.." src="{$v.goods_img}">
 					</a>
 					<h4>
-						<a href="">【五道口】上岛咖啡：双人下午茶套餐，美味齐分享</a>
+						<a href="">{$v.main_title}</a>
 					</h4>
 					<p>
-						<strong>¥39.8</strong>
-						<span class='cost-price'>门店价<del>144</del></span>
+						<strong>¥{$v.price}</strong>
+						<span class='cost-price'>门店价<del>{$v.old_price}</del></span>
 						<span class='num'>
-							<span>173</span>
-							 人已团购
+							<span>{$v.buy}</span>
+							 人已购
 						</span>
 					</p>
 				</div>
+				</foreach>
 			</div>
 		</div>
 		

@@ -34,47 +34,19 @@
 		<div class='sidebar'>
 			<div class='hot-products'>
 				<h3>热卖商品</h3>
+
 				<ul>
+				<foreach from="$hotgoods" key="$key" value="$v">
 					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
+						<h6><span>{$key}</span><a href="{|U('Index/Detail/index')}/gid/{$v.gid}">【2店通用】CGV星星国际影城电影</a></h6>
+						<a href="{|U('Index/Detail/index')}/gid/{$v.gid}"><img src="{$v.goods_img}"/></a>
 						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
+							<em>¥{$v.price}</em>
+							<p>每天<span>{$v.buy}</span>人团购</p>
 						</div>
 					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
-					<li>
-						<h6><span>1</span><a href="">【2店通用】CGV星星国际影城电影</a></h6>
-						<a href=""><img src="http://p1.meituan.net/deal/201301/04/173144_2860489.jpg"/></a>
-						<div class='info'>
-							<em>¥30</em>
-							<p>每天<span>231</span>人团购</p>
-						</div>
-					</li>
+				</foreach>
+
 				</ul>
 			</div>
 		</div>
