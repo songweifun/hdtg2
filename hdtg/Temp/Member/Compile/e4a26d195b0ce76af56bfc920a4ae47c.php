@@ -33,14 +33,16 @@
 			</div>
 			<div class='search'>
 				<div class='item'>
-					<a href="">小时代</a>
-					<a href="">KTV</a>
-					<a href="">电影</a>
-					<a href="">全聚德</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/小时代">小时代</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/KTV">KTV</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/电影">电影</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/全聚德">全聚德</a>
 				</div>
 				<div class='search-bar'>
+					<form action="<?php echo U('Index/Index/index');?>" method="get">
 					<input class='s-text' type="text" name="keywords" value="请输入商品名称，地址等">
 					<input class='s-submit' type="submit" value='搜索'>
+					</form>
 				</div>
 			</div>
 			<div class='commitment'>

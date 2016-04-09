@@ -1,5 +1,6 @@
 <?php
-class CartControl extends CommonControl{
+class CartControl extends Control{
+	public $uid;
 	/**
 	 * 显示购物车页
 	 */	

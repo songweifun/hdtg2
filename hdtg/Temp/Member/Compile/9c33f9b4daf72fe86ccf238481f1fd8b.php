@@ -33,14 +33,16 @@
 			</div>
 			<div class='search'>
 				<div class='item'>
-					<a href="">小时代</a>
-					<a href="">KTV</a>
-					<a href="">电影</a>
-					<a href="">全聚德</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/小时代">小时代</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/KTV">KTV</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/电影">电影</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/全聚德">全聚德</a>
 				</div>
 				<div class='search-bar'>
+					<form action="<?php echo U('Index/Index/index');?>" method="get">
 					<input class='s-text' type="text" name="keywords" value="请输入商品名称，地址等">
 					<input class='s-submit' type="submit" value='搜索'>
+					</form>
 				</div>
 			</div>
 			<div class='commitment'>
@@ -75,13 +77,13 @@
 					<div class='user-nav my-hdtg '>
 						<a class='title' href="">我的团购</a>
 						<ul class="menu">
-							<li><a href="">我的订单</a></li>	
+							<li><a href="<?php echo U('Member/Order/index');?>">我的订单</a></li>
 							<li><a href="">我的评价</a></li>
-							<li><a href="">我的收藏</a></li>
-							<li><a href="">我的成长</a></li>
-							<li><a href="">账户余额</a></li>
+							<li><a href="<?php echo U('Member/Index/collect');?>">我的收藏</a></li>
+							<li><a href="<?php echo U('Member/Account/growth');?>">我的成长</a></li>
+							<li><a href="<?php echo U('Member/Account/index');?>">账户余额</a></li>
 							<li><a href="">账户充值</a></li>
-							<li><a href="">账户设置</a></li>
+							<li><a href="<?php echo U('Member/Account/setting');?>">账户设置</a></li>
 						</ul>
 					</div>
 
@@ -101,7 +103,7 @@
 					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' detailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
 						<a class='title' href="">最近浏览</a>
 						<ul class="menu">
-							
+							<p class="clear">最近没有浏览任何商品</p>
 						</ul>
 					</div>
 

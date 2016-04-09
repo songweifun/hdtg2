@@ -119,6 +119,10 @@ class RegControl extends CommonControl{
 		$db=K('Check');
 		if($uid=$db->addUser($data)){
 			$_SESSION[C('RBAC_AUTH_KEY')]=$uid;
+			$db=M('userinfo');
+			$userinfo=array("user_id"=>$uid);
+			$db->add($userinfo);
+
 		$this->success('注册成功',U('Index/Index/index'));
 		}else{
 			throw new Exception("注册失败");

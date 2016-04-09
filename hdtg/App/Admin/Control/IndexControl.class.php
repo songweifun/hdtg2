@@ -4,7 +4,7 @@
  * @author zhengyin
  * 
  */
-class IndexControl extends Control{
+class IndexControl extends CommonControl{
 	/**
 	 * 显示首页
 	 */

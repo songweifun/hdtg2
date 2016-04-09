@@ -6,6 +6,10 @@ class CommonControl extends Control{
 		if(method_exists($this,'__auto')){
 			$this->__auto();
 		}
+
+		if(!isset($_SESSION[C('RBAC_SUPER_ADMIN')])){
+			$this->error("请先登录!",U('Admin/Login/index'));
+		}
 	}
 	
 	

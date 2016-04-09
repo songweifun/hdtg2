@@ -55,7 +55,7 @@
 			<div class='menu'>
 				<a class='title' href="javascript:void(0);">会员管理</a>
 				<ul class='menuList' >
-					<li><a href=""></a></li>
+					<li><a href="<?php echo U('Admin/User/index');?>">所有会员</a></li>
 					<li><a href=""></a></li>
 				</ul>
 			</div>
@@ -105,8 +105,9 @@
 			<div class='menu'>	
 				<a class='title' href="javascript:void(0);">订单管理</a>
 				<ul class='menuList' >
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
+					<li><a href="<?php echo U('Admin/Order/index');?>">全部订单</a></li>
+					<li><a href="<?php echo U('Admin/Order/index');?>/status/2">已付款</a></li>
+					<li><a href="<?php echo U('Admin/Order/index');?>/status/1">未付款</a></li>
 				</ul>
 			</div>
 		</div>
