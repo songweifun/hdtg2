@@ -183,6 +183,7 @@ private function setCategory()
 									$url=url_param_remove('cid',$this->url);
 									$sonArr=array();
 									$sonArr[]="<a class='active' href='".$url."/cid/".$this->cid."'>"."全部"."</a>";
+									if(!isset($sonCategory)) return false;
 									foreach ($sonCategory as $k => $v) {
 									# code...
 									$sonArr[]="<a href='".$url."/cid/".$v['cid']."'>".$v['cname']."</a>";

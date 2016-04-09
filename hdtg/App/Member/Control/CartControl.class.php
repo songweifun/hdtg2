@@ -6,7 +6,8 @@ class CartControl extends Control{
 	 */	
 	//private $uid=null;
 	//p判断用户是否登陆了
-	public function __auto(){
+	public function __init(){
+
 		if(isset($_SESSION[C('RBAC_AUTH_KEY')])){
 			$this->uid=$_SESSION[C('RBAC_AUTH_KEY')];
 			$data=array();
@@ -28,13 +29,24 @@ class CartControl extends Control{
 			//清除seesion
 			unset($_SESSION['cart']);
 		}
-		}else{
 
-			$this->error("请先登录!",U('Member/Login/index'));
 		}
+
+
+		$this->setDav();
 	}
 
 
+	/**
+	 * 顶级标题
+	 * @Author   FSW<keepfun.com>
+	 * @DateTime 2016-03-22T22:08:51+0800
+	 */
+	public function setDav(){
+		$db=K('Category');
+		$dav=$db->getTopCategory(0);
+		$this->assign('dav',$dav);
+	}
 
 	public function index(){
 		//查询收货地址数据
