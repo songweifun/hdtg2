@@ -30,6 +30,7 @@ class BuyControl extends CommonControl{
 	public function payment(){
 		//p($_POST);exit;
 		if(IS_POST===true){
+			if(!isset($_POST['addressid'])) $this->error('没有收货地址','Member/Account/setAddress');
 			if(!isset($_POST['gid'])) $this->error("购物车没有商品",U('Index/Index/index'));
 		if(is_array($_POST['gid'])){//购物车提交数据
 			$data=$_POST;

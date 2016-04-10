@@ -28,19 +28,21 @@
 	<div id="header">
 		<div class='position'>
 			<div class='logo'>
-				<a style="line-height:60px;" href="http://localhost/hdtg2">后盾团购</a>
+				<a style="line-height:60px;" href="http://localhost/hdtg2">孟楠团购</a>
 				<a style="font-size:16px;" href="http://localhost/hdtg2">www.houdunwang.com</a>
 			</div>
 			<div class='search'>
 				<div class='item'>
-					<a href="">小时代</a>
-					<a href="">KTV</a>
-					<a href="">电影</a>
-					<a href="">全聚德</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/小时代">小时代</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/KTV">KTV</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/电影">电影</a>
+					<a href="<?php echo U('Index/Index/index');?>/keywords/全聚德">全聚德</a>
 				</div>
 				<div class='search-bar'>
+					<form action="<?php echo U('Index/Index/index');?>" method="get">
 					<input class='s-text' type="text" name="keywords" value="请输入商品名称，地址等">
 					<input class='s-submit' type="submit" value='搜索'>
+					</form>
 				</div>
 			</div>
 			<div class='commitment'>
@@ -54,12 +56,82 @@
 		<div class='position'>
 			<!-- 分类相关 -->
 			<div class='category'>
-				<a class='active' href="http://localhost/hdtg2">首页</a>
+				<a class='' href="http://localhost/hdtg2" category="-1">首页</a>
 
-				<?php if(is_array($dav)):?><?php  foreach($dav as $v){ ?>
-				<a href="<?php echo U('Index/Index/index');?>/cid/<?php echo $v['cid'];?>"><?php echo $v['cname'];?></a>
+				<?php if(is_array($dav)):?><?php  foreach($dav as $k=>$v){ ?>
+				<a href="<?php echo U('Index/Index/index');?>/cid/<?php echo $v['cid'];?>" category="<?php echo $k;?>"><?php echo $v['cname'];?></a>
 				<?php }?><?php endif;?>
 			</div>
+			<!-- 顶级栏目高亮显示 -->
+			<script>
+					$('#nav .category a').click(function(){
+						var category=$(this).attr('category');
+						document.cookie="category="+category+';path=/';
+
+					})
+					var name="category";
+					var category=getCookie(name);
+
+					$('.category a').each(function(){
+						if($(this).attr('category') == category){
+							$(this).addClass('active');
+						}else{
+							$(this).removeClass('active');
+						}
+					})
+
+
+
+					function getCookie(name){
+
+						var arr = document.cookie.split(';');
+						for(var i=0;i<arr.length;i++){
+							var	arr2 = arr[i].split('=');
+							var preg = new RegExp('\\b'+name+'\\b','i')
+							if(preg.test(arr2[0])){
+								return	arr2[1];
+							}
+						}
+
+					}
+
+
+
+
+
+			</script>
+			<!--
+			<script>
+
+				/**
+				 * 获取cookie
+				 * @param name
+				 * @returns
+				 */
+				function getCookie(name){
+					var arr = document.cookie.split(';');
+					for(var i=0;i<arr.length;i++){
+						var	arr2 = arr[i].split('=');
+						var preg = new RegExp('\\b'+name+'\\b','i')
+						if(preg.test(arr2[0])){
+							return	arr2[1];
+						}
+					}
+				}
+				$('.category a').click(function(){
+					var category = $(this).attr('category');
+					document.cookie = "category="+category+';path=/';
+				})
+				var category = getCookie('category');
+				$('.category a').each(function(){
+					if($(this).attr('category') == category){
+						$(this).addClass('active');
+					}else{
+						$(this).removeClass('active');
+					}
+				})
+			</script>
+			-->
 			<!-- 用户相关 -->
 			<div id="user-relevance" class='user-relevance'>
                             
@@ -75,13 +147,13 @@
 					<div class='user-nav my-hdtg '>
 						<a class='title' href="">我的团购</a>
 						<ul class="menu">
-							<li><a href="">我的订单</a></li>	
+							<li><a href="<?php echo U('Member/Order/index');?>">我的订单</a></li>
 							<li><a href="">我的评价</a></li>
-							<li><a href="">我的收藏</a></li>
-							<li><a href="">我的成长</a></li>
-							<li><a href="">账户余额</a></li>
+							<li><a href="<?php echo U('Member/Index/collect');?>">我的收藏</a></li>
+							<li><a href="<?php echo U('Member/Account/growth');?>">我的成长</a></li>
+							<li><a href="<?php echo U('Member/Account/index');?>">账户余额</a></li>
 							<li><a href="">账户充值</a></li>
-							<li><a href="">账户设置</a></li>
+							<li><a href="<?php echo U('Member/Account/setting');?>">账户设置</a></li>
 						</ul>
 					</div>
 
@@ -101,7 +173,7 @@
 					<div  class='user-nav recent-view ' url='<?php echo U("Member/Index/getRecentView");?>' detailUrl='<?php echo U("Index/Detail/index");?>' clearUrl='<?php echo U("Member/Index/clearRecentView");?>'>
 						<a class='title' href="">最近浏览</a>
 						<ul class="menu">
-							
+							<p class="clear">最近没有浏览任何商品</p>
 						</ul>
 					</div>
 
@@ -124,10 +196,10 @@
 	<div class='left'>
 		<ul class='userhome-nav'>
 			<li class='active'>
-				<a href="">团购订单</a>
+				<a href="<?php echo U('Member/Order/index');?>">团购订单</a>
 			</li>
 			<li>
-				<a href="">我的收藏</a>
+				<a href="<?php echo U('Member/Index/collect');?>">我的收藏</a>
 			</li>
 			<li>
 				<a href="">我的评价</a>
@@ -144,6 +216,7 @@
 		</ul>
 		<div id="content">
 		<link href="http://localhost/hdtg2/hdtg/App/Member/Tpl/Public/css/account.css" type="text/css" rel="stylesheet" >
+
 		<div class='setting-nav'>
 			<a class='active' href="">基本信息</a>
 			<a href="">收货地址</a>
@@ -159,48 +232,37 @@
 					</tr>
 				</thead>
 				<tbody>
+				 <?php if(is_array($address)):?><?php  foreach($address as $v){ ?>
 					<tr>
 						<td>
-							郑印
+							<?php echo $v['consignee'];?>
 						</td>
 						<td>
-							北京 北京 朝阳区 小营路四方大厦，100000
+							<?php echo $v['province'];?>-<?php echo $v['city'];?>-<?php echo $v['county'];?>-<?php echo $v['street'];?>
 						</td>
 						<td>
-							158****9630
+							<?php echo $v['tel'];?>
 						</td>
 						<td>
-							<a href="">删除</a>
-							<a href="">修改</a>
+							<a class='btn btn-small delAffirm' href="<?php echo U('Member/Account/delAddress');?>/addressid/<?php echo $v['addressid'];?>">删除</a>
+							<a href="javascript:void(0);" class="delAdress" url="<?php echo U('Member/Account/editAddress');?>/addressid/<?php echo $v['addressid'];?>" urlsubmit="<?php echo U('Member/Account/addAddress');?>/addressid/<?php echo $v['addressid'];?>">修改</a>
 						</td>
 					</tr>
-					<tr>
-						<td>
-							郑印
-						</td>
-						<td>
-							北京 北京 朝阳区 小营路四方大厦，100000
-						</td>
-						<td>
-							158****9630
-						</td>
-						<td>
-							<a href="">删除</a>
-							<a href="">修改</a>
-						</td>
-					</tr>
+					<?php }?><?php endif;?>
+
 				</tbody>
 			</table>	
 		</div>
 		<!-- 收货地址 -->
+<form action="<?php echo U('Member/Account/addAddress');?>"method="post" class="myAddressForm">
 		<div id="addressForm" class="address">
 			<div class='address-base'>
 				<dl>
 					<dt>*省市区：</dt>
 					<dd style="width:400px;">
-						<select id="s_province" name="s_province"></select>
-						<select id="s_city" name="s_city" ></select>
-						<select id="s_county" name="s_county"></select>
+						<select id="s_province" name="s_province" class="s_province"></select>
+						<select id="s_city" name="s_city" class="s_city"></select>
+						<select id="s_county" name="s_county" class="s_county"></select>
 						<script type="text/javascript" src="http://localhost/hdtg2/classLibs/area/area.js"></script>
 						<script type="text/javascript">_init_area();</script>
 					</dd>
@@ -208,29 +270,36 @@
 				<dl>
 					<dt>*街道地址：</dt>
 					<dd style="width:450px;">
-						<input name="" type="text" value="">
+						<input type="text" value="" name="street" class="street">
 					</dd>
 				</dl>
 				<dl>
 					<dt>*邮政编码：</dt>
 					<dd>
-						<input name="" type="text" value="">
+						<input  type="text" value="" name="postcode" class="postcode">
 					</dd>
 				</dl>
 				<dl>
 					<dt>*收货人姓名：</dt>
 					<dd>
-						<input name="" type="text" value="">
+						<input  type="text" value="" name="uname" class="uname">
 					</dd>
 				</dl>
 				<dl>
 					<dt>*电话号码：</dt>
 					<dd>
-						<input type="text" value=""> 
+						<input type="text" value="" name="tel" class="tel">
+					</dd>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd>
+						<input type="submit" value="提交">
 					</dd>
 				</dl>
 			</div>
-		</div>	
+		</div>
+</form>
 <?php if(!defined("HDPHP_PATH"))exit;C("SHOW_WARNING",false);?>			</div>
 		</div>
 		<div class='user-status'>
@@ -241,3 +310,37 @@
 	</div>
 </body>
 </html>
+<script>
+$(".address-list .delAdress").click(function(){
+
+	var url=$(this).attr('url');
+	var urlsubmit=$(this).attr('urlsubmit');
+	//alert(urlsubmit)
+	//var addressid=<?php echo $v['addressid'];?>;
+	//var self=this;
+	$.ajax({
+		url: url,
+		dataType: 'json',
+		success:function(result){
+
+			$('.address-base .street').val(result.street);
+			$('.address-base .postcode').val(result.postcode);
+			$('.address-base .uname').val(result.consignee);
+			$('.address-base .tel').val(result.tel);
+			$('.address-base .s_province').val(result.province);
+			//$('.address-base .s_city').val=(result.city);
+			//alert($('.address-base .s_county').val());
+			//alert(typeof result.city)
+			$('.myAddressForm').attr("action",urlsubmit);
+
+
+		}
+
+	});
+
+})
+
+	$('.myAddressForm').submit(function(){
+		if($('.address-base .s_county').val()=="市、县级市"){alert('请设置省市区');return false;}
+	})
+</script>

@@ -28,7 +28,7 @@
 	<div id="header">
 		<div class='position'>
 			<div class='logo'>
-				<a style="line-height:60px;" href="http://localhost/hdtg2">后盾团购</a>
+				<a style="line-height:60px;" href="http://localhost/hdtg2">孟楠团购</a>
 				<a style="font-size:16px;" href="http://localhost/hdtg2">www.houdunwang.com</a>
 			</div>
 			<div class='search'>
@@ -56,12 +56,82 @@
 		<div class='position'>
 			<!-- 分类相关 -->
 			<div class='category'>
-				<a class='active' href="http://localhost/hdtg2">首页</a>
+				<a class='' href="http://localhost/hdtg2" category="-1">首页</a>
 
-				<?php if(is_array($dav)):?><?php  foreach($dav as $v){ ?>
-				<a href="<?php echo U('Index/Index/index');?>/cid/<?php echo $v['cid'];?>"><?php echo $v['cname'];?></a>
+				<?php if(is_array($dav)):?><?php  foreach($dav as $k=>$v){ ?>
+				<a href="<?php echo U('Index/Index/index');?>/cid/<?php echo $v['cid'];?>" category="<?php echo $k;?>"><?php echo $v['cname'];?></a>
 				<?php }?><?php endif;?>
 			</div>
+			<!-- 顶级栏目高亮显示 -->
+			<script>
+					$('#nav .category a').click(function(){
+						var category=$(this).attr('category');
+						document.cookie="category="+category+';path=/';
+
+					})
+					var name="category";
+					var category=getCookie(name);
+
+					$('.category a').each(function(){
+						if($(this).attr('category') == category){
+							$(this).addClass('active');
+						}else{
+							$(this).removeClass('active');
+						}
+					})
+
+
+
+					function getCookie(name){
+
+						var arr = document.cookie.split(';');
+						for(var i=0;i<arr.length;i++){
+							var	arr2 = arr[i].split('=');
+							var preg = new RegExp('\\b'+name+'\\b','i')
+							if(preg.test(arr2[0])){
+								return	arr2[1];
+							}
+						}
+
+					}
+
+
+
+
+
+			</script>
+			<!--
+			<script>
+
+				/**
+				 * 获取cookie
+				 * @param name
+				 * @returns
+				 */
+				function getCookie(name){
+					var arr = document.cookie.split(';');
+					for(var i=0;i<arr.length;i++){
+						var	arr2 = arr[i].split('=');
+						var preg = new RegExp('\\b'+name+'\\b','i')
+						if(preg.test(arr2[0])){
+							return	arr2[1];
+						}
+					}
+				}
+				$('.category a').click(function(){
+					var category = $(this).attr('category');
+					document.cookie = "category="+category+';path=/';
+				})
+				var category = getCookie('category');
+				$('.category a').each(function(){
+					if($(this).attr('category') == category){
+						$(this).addClass('active');
+					}else{
+						$(this).removeClass('active');
+					}
+				})
+			</script>
+			-->
 			<!-- 用户相关 -->
 			<div id="user-relevance" class='user-relevance'>
                             
@@ -229,9 +299,11 @@
 						</td>
 					</tr>
 				<?php }?><?php endif;?>
+
 				</tbody>
 			</table>
 		</div>
+		<a href="<?php echo U('Member/Account/setAddress');?>" style="color:blue;"><p align="center" >添加地址</p></a>
 		<!-- 订单提交 -->
 		<div class='bottom'>
 			<input type="submit" class='submit' value="提交订单">

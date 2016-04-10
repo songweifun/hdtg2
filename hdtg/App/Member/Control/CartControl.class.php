@@ -58,6 +58,7 @@ class CartControl extends Control{
 		}
 
 		$result=$this->getCartData();
+		$this->assign('userLogin',$this->uid);
 		$this->assign("carts",$result[0]);
 		$this->assign("total",$result[1]);
 		$this->display();

@@ -1,5 +1,6 @@
 <load file="./hdtg/App/Member/Tpl/Common/userhome-hd.html" />
 		<link href="__PUBLIC__/css/account.css" type="text/css" rel="stylesheet" >
+
 		<div class='setting-nav'>
 			<a class='active' href="">基本信息</a>
 			<a href="">收货地址</a>
@@ -15,48 +16,37 @@
 					</tr>
 				</thead>
 				<tbody>
+				 <foreach from="$address" value="$v">
 					<tr>
 						<td>
-							郑印
+							{$v.consignee}
 						</td>
 						<td>
-							北京 北京 朝阳区 小营路四方大厦，100000
+							{$v.province}-{$v.city}-{$v.county}-{$v.street}
 						</td>
 						<td>
-							158****9630
+							{$v.tel}
 						</td>
 						<td>
-							<a href="">删除</a>
-							<a href="">修改</a>
+							<a class='btn btn-small delAffirm' href="{|U('Member/Account/delAddress')}/addressid/{$v.addressid}">删除</a>
+							<a href="javascript:void(0);" class="delAdress" url="{|U('Member/Account/editAddress')}/addressid/{$v.addressid}" urlsubmit="{|U('Member/Account/addAddress')}/addressid/{$v.addressid}">修改</a>
 						</td>
 					</tr>
-					<tr>
-						<td>
-							郑印
-						</td>
-						<td>
-							北京 北京 朝阳区 小营路四方大厦，100000
-						</td>
-						<td>
-							158****9630
-						</td>
-						<td>
-							<a href="">删除</a>
-							<a href="">修改</a>
-						</td>
-					</tr>
+					</foreach>
+
 				</tbody>
 			</table>	
 		</div>
 		<!-- 收货地址 -->
+<form action="{|U('Member/Account/addAddress')}"method="post" class="myAddressForm">
 		<div id="addressForm" class="address">
 			<div class='address-base'>
 				<dl>
 					<dt>*省市区：</dt>
 					<dd style="width:400px;">
-						<select id="s_province" name="s_province"></select>
-						<select id="s_city" name="s_city" ></select>
-						<select id="s_county" name="s_county"></select>
+						<select id="s_province" name="s_province" class="s_province"></select>
+						<select id="s_city" name="s_city" class="s_city"></select>
+						<select id="s_county" name="s_county" class="s_county"></select>
 						<script type="text/javascript" src="__ROOT__/classLibs/area/area.js"></script>
 						<script type="text/javascript">_init_area();</script>
 					</dd>
@@ -64,27 +54,68 @@
 				<dl>
 					<dt>*街道地址：</dt>
 					<dd style="width:450px;">
-						<input name="" type="text" value="">
+						<input type="text" value="" name="street" class="street">
 					</dd>
 				</dl>
 				<dl>
 					<dt>*邮政编码：</dt>
 					<dd>
-						<input name="" type="text" value="">
+						<input  type="text" value="" name="postcode" class="postcode">
 					</dd>
 				</dl>
 				<dl>
 					<dt>*收货人姓名：</dt>
 					<dd>
-						<input name="" type="text" value="">
+						<input  type="text" value="" name="uname" class="uname">
 					</dd>
 				</dl>
 				<dl>
 					<dt>*电话号码：</dt>
 					<dd>
-						<input type="text" value=""> 
+						<input type="text" value="" name="tel" class="tel">
+					</dd>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd>
+						<input type="submit" value="提交">
 					</dd>
 				</dl>
 			</div>
-		</div>	
+		</div>
+</form>
 <load file="./hdtg/App/Member/Tpl/Common/userhome-ft.html" />
+<script>
+$(".address-list .delAdress").click(function(){
+
+	var url=$(this).attr('url');
+	var urlsubmit=$(this).attr('urlsubmit');
+	//alert(urlsubmit)
+	//var addressid={$v['addressid']};
+	//var self=this;
+	$.ajax({
+		url: url,
+		dataType: 'json',
+		success:function(result){
+
+			$('.address-base .street').val(result.street);
+			$('.address-base .postcode').val(result.postcode);
+			$('.address-base .uname').val(result.consignee);
+			$('.address-base .tel').val(result.tel);
+			$('.address-base .s_province').val(result.province);
+			//$('.address-base .s_city').val=(result.city);
+			//alert($('.address-base .s_county').val());
+			//alert(typeof result.city)
+			$('.myAddressForm').attr("action",urlsubmit);
+
+
+		}
+
+	});
+
+})
+
+	$('.myAddressForm').submit(function(){
+		if($('.address-base .s_county').val()=="市、县级市"){alert('请设置省市区');return false;}
+	})
+</script>
